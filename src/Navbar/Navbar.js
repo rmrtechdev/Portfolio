@@ -3,10 +3,9 @@ import { NavLink } from 'react-router-dom'
 import { useNavigate } from 'react-router-dom'
 import { FaGithub, FaLinkedin } from "react-icons/fa"
 import Logo from '../Media/Images/logo.png'
-import { Fragment } from 'react/cjs/react.production.min'
-import { useEffect, useState } from 'react'
-import React from 'react'
 
+
+import React, { Fragment, useEffect, useState } from 'react'
 /*
 <li className="nav-item" onClick={() => closeNav()}><NavLink to="/blogs" activeClassName="active" className="nav-link"><h1>Blogs</h1></NavLink></li>
 */
@@ -36,13 +35,18 @@ function Navbar() {
                     <li className="nav-item" onClick={() => closeNav()}><NavLink to="/skills" activeClassName="active" className="nav-link"><h1>Skills</h1></NavLink></li>
                     <li className="nav-item" onClick={() => closeNav()}><NavLink to="/work" activeClassName="active" className="nav-link"><h1>Work</h1></NavLink></li>
 
-                    <li className="nav-item">
-                        <a className="nav-link" href="http://www.django.rmrtech.tech/react-admin/" target="_blank" rel="noopener noreferrer">
-                            <h1>
-                                Demo Dashboard
-                            </h1>
-                        </a>
-                    </li>
+
+                    <li className="nav-item" onClick={() => closeNav()}><NavLink to="/globe" activeClassName="active" className="nav-link"><h1> Globe </h1></NavLink></li>
+
+
+
+                    <li className="nav-item" onClick={() => closeNav()}><NavLink to="/security" activeClassName="active" className="nav-link"><h1> Security </h1></NavLink></li>
+
+
+                    <li className="nav-item" onClick={() => closeNav()}><NavLink to="/notes" activeClassName="active" className="nav-link"><h1> Curriculum </h1></NavLink></li>
+
+
+
 
                     <li className="nav-item" onClick={() => closeNav()}><NavLink to="/contact" activeClassName="active" className="nav-link"><h1>Contact</h1></NavLink></li>
 

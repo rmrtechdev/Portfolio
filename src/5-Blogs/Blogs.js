@@ -1,26 +1,37 @@
 import './blogs.css'
-import { useEffect, useState } from 'react'
-
+import React, { useEffect, useState } from 'react'
+import JavascriptBanner from '../Media/Images/blog-banners/javascript-banner.jpg'
+import RubyBanner from '../Media/Images/blog-banners/ruby-banner.png'
+import MediumClap from '../Media/Images/medium-clap.png'
 
 function Blogs() {
     useEffect(() => {window.scrollTo(0, 0)}, [])
     const [blog1, setBlog1] = useState(true)
     const [blog2, setBlog2] = useState(false)
     const [blog3, setBlog3] = useState(false)
+
     function handleBlog1() {
         setBlog1(true)
         setBlog2(false)
         setBlog3(false)
+
     }
     function handleBlog2() {
         setBlog1(false)
         setBlog2(true)
         setBlog3(false)
+
     }
     function handleBlog3() {
         setBlog1(false)
         setBlog2(false)
         setBlog3(true)
+
+    }
+    function handleBlog4() {
+        setBlog1(false)
+        setBlog2(false)
+        setBlog3(false)
     }
     return (
         <div className='blogs-container'>
@@ -36,24 +47,23 @@ function Blogs() {
                 <input type="radio" name="slider" id="blog-item-1" defaultChecked/>
                 <input type="radio" name="slider" id="blog-item-2"/>
                 <input type="radio" name="slider" id="blog-item-3"/>
+                <input type="radio" name="slider" id="blog-item-4" />
                 <div className="blog-cards">
                     <label style={blog1 ? {cursor: 'inherit'} : {cursor: "pointer"}} className="blog-card" htmlFor="blog-item-1" id="blog-slide-1" onClick={() => handleBlog1()}>
                         <div className="blog-content">
-                            <img className='blog-image' src={ReactBanner} alt="React Banner" />
+                            
+                            <img className='blog-image' src={ <></>} 
+
+
+                            alt="React Banner" />
                             <div className="blog-text-content">
-                                <h1 className='blog-title'><a style={blog1 ? null : {pointerEvents: "none"}} href='https://medium.com/@venegasdavidm/the-origin-of-react-db39d84c8503' target="_blank" rel="noreferrer">The Origin of React</a></h1>
+                                <h1 className='blog-title'><a style={blog1 ? null : {pointerEvents: "none"}} href='https://medium.com/@venegasdavidm/the-origin-of-react-db39d84c8503' target="_blank" rel="noreferrer">crAPI</a></h1>
                                 <div className="blog-start-wrap">
                                     <p className='blog-start'>Learn the history behind one of the world’s most popular programming libraries. React, (also known as ReactJS or React.js) is a popular free and open-source front-end Javascript library that is used for building UI components and user interfaces. It was created by Facebook and is still maintained by them along with an ever growing<span id='blogStartResponsive'> community of companies and individual developers. It is currently listed at or near the top of many industry rankings for popularity, developer</span>...&nbsp; <a style={blog1 ? null : {pointerEvents: "none"}} href='https://medium.com/@venegasdavidm/the-origin-of-react-db39d84c8503' target="_blank" rel="noreferrer">Read More</a></p>
                                 </div>
                             </div>
-                            <div className="blog-facts">
-                                <h4 className="blog-date">Nov 17, 2021</h4>
-                                <h2 className="blog-read">3 Minute Read</h2>
-                                <div className="blog-likes">
-                                    <img src={MediumClap} alt="Claps" />
-                                    <p>104</p>
-                                </div>
-                            </div>
+                            
+                            
                         </div>
                     </label>
                     <label style={blog2 ? {cursor: 'inherit'} : {cursor: "pointer"}} className="blog-card" htmlFor="blog-item-2" id="blog-slide-2" onClick={() => handleBlog2()}>
@@ -94,6 +104,10 @@ function Blogs() {
                             </div>
                         </div>
                     </label>
+
+
+                   
+
                 </div>
             </div>
         </div>

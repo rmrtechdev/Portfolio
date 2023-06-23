@@ -1,5 +1,5 @@
 .blogs-container {
-    padding: 9.5rem 0 3.5rem 18.5rem;
+    padding: 3.5rem 0 3.5rem 18.5rem;
     min-height: 100vh;
     display: flex;
     align-items: center;
@@ -21,8 +21,7 @@
     transition: color .35s ease;
 }
 .blog-header span:hover {
-    color: # 00e6e6
-;
+    color: #08fdd8;
     animation: contactBounce 1s ease forwards
 }
 .blog-description {
@@ -98,8 +97,7 @@
     height: 21.5rem;
     border-bottom: 1px solid gray;
     color: black;
-    background-color: # 00e6e6
-;
+    background-color: #08fdd8;
     padding: 1rem 2rem;
 }
 .blog-title {
