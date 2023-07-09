@@ -1,7 +1,8 @@
 import './blogs.css'
 import React, { useEffect, useState } from 'react'
-import JavascriptBanner from '../Media/Images/blog-banners/javascript-banner.jpg'
-import RubyBanner from '../Media/Images/blog-banners/ruby-banner.png'
+import Crapi from '../Media/Images/crapi.png'
+import Hackthebox from '../Media/Images/hackthebox.png'
+import Tryhackme from '../Media/Images/tryhackme.png'
 import MediumClap from '../Media/Images/medium-clap.png'
 
 function Blogs() {
@@ -28,21 +29,31 @@ function Blogs() {
         setBlog3(true)
 
     }
-    function handleBlog4() {
-        setBlog1(false)
-        setBlog2(false)
-        setBlog3(false)
-    }
+
     return (
         <div className='blogs-container'>
             <h1 className="blog-header">
-                <span>B</span>
-                <span>l</span>
-                <span>o</span>
+                <span>S</span>
+                <span>e</span>
+                <span>c</span>
+                <span>u</span>
+                <span>r</span>
+                <span>i</span>
+                <span>t</span>
+                <span>y</span>
+                &nbsp;
+                <span>T</span>
+                <span>r</span>
+                <span>a</span>
+                <span>i</span>
+                <span>n</span>
+                <span>i</span>
+                <span>n</span>
                 <span>g</span>
-                <span>s</span>
+               
+
             </h1>
-            <p className="blog-description">I enjoy keeping myself informed. Here's a few things I've written.</p>
+            <p className="blog-description">I enjoy learning about ethical penetration testing and network security. These are just a few environments I use to practice.</p>
             <div className="blog-wrapper">
                 <input type="radio" name="slider" id="blog-item-1" defaultChecked/>
                 <input type="radio" name="slider" id="blog-item-2"/>
@@ -52,14 +63,18 @@ function Blogs() {
                     <label style={blog1 ? {cursor: 'inherit'} : {cursor: "pointer"}} className="blog-card" htmlFor="blog-item-1" id="blog-slide-1" onClick={() => handleBlog1()}>
                         <div className="blog-content">
                             
-                            <img className='blog-image' src={ <></>} 
-
-
+                            <img className='blog-image' src={ Crapi } 
                             alt="React Banner" />
                             <div className="blog-text-content">
-                                <h1 className='blog-title'><a style={blog1 ? null : {pointerEvents: "none"}} href='https://medium.com/@venegasdavidm/the-origin-of-react-db39d84c8503' target="_blank" rel="noreferrer">crAPI</a></h1>
+                                <h1 className='blog-title'><a style={blog1 ? null : {pointerEvents: "none"}} href='https://owasp.org/crAPI' target="_blank" rel="noreferrer">crAPI</a></h1>
                                 <div className="blog-start-wrap">
-                                    <p className='blog-start'>Learn the history behind one of the world’s most popular programming libraries. React, (also known as ReactJS or React.js) is a popular free and open-source front-end Javascript library that is used for building UI components and user interfaces. It was created by Facebook and is still maintained by them along with an ever growing<span id='blogStartResponsive'> community of companies and individual developers. It is currently listed at or near the top of many industry rankings for popularity, developer</span>...&nbsp; <a style={blog1 ? null : {pointerEvents: "none"}} href='https://medium.com/@venegasdavidm/the-origin-of-react-db39d84c8503' target="_blank" rel="noreferrer">Read More</a></p>
+                                    <p className='blog-start'>
+                                        "At a high level, the crAPI application is modeled as a B2C application that allows any user to get their car servicing done by a car mechanic. As a microservice architecture, it deliberately exposes security vulnerabilities that can be exploited by any security enthusiast who is playing with the application..."
+
+                                         
+                                        <a style={blog1 ? null : { pointerEvents: "none" }} href='https://owasp.org/crAPI/' target="_blank" rel="noreferrer">
+                                            &nbsp;
+                                            Learn More</a></p>
                                 </div>
                             </div>
                             
@@ -68,40 +83,43 @@ function Blogs() {
                     </label>
                     <label style={blog2 ? {cursor: 'inherit'} : {cursor: "pointer"}} className="blog-card" htmlFor="blog-item-2" id="blog-slide-2" onClick={() => handleBlog2()}>
                         <div className="blog-content">
-                            <img className='blog-image' src={JavascriptBanner} alt="Javascript Banner" />
+                            <img className='blog-image' src={Hackthebox} alt="Javascript Banner" />
                             <div className="blog-text-content">
-                                <h1 className='blog-title'><a style={blog2 ? null : {pointerEvents: "none"}} href='https://medium.com/@venegasdavidm/the-origin-of-javascript-288154b923e' target="_blank" rel="noreferrer">The Origin Of JavaScript</a></h1>
+                                <h1 className='blog-title'><a style={blog2 ? null : { pointerEvents: "none" }} href='https://www.hackthebox.com' target="_blank" rel="noreferrer">
+                                   Hack The Box 
+                                   </a></h1>
                                 <div className="blog-start-wrap">
-                                    <p className='blog-start'>In 1995 Brendan Eich, a Netscape Communications Corporation programmer, took 10 days to develop a scripting language he called Mocha. Back than internet connectivity used dial-up connections with telephone lines and modems, so when you filled out a form on a website — which was usually coded using a language like<span id='blogStartResponsive'> Perl — the validation of the input fields of any form had to make a full round trip to the server. This was not only very, very slow, but even could cause</span>...&nbsp; <a style={blog2 ? null : {pointerEvents: "none"}} href='https://medium.com/@venegasdavidm/the-origin-of-javascript-288154b923e' target="_blank" rel="noreferrer">Read More</a></p>
+                                    <p className='blog-start'>
+                                        
+                                        The #1 cybersecurity & hacking training platform for the best certified new hires at the top companies.
+                                        
+                                        <a style={blog2 ? null : { pointerEvents: "none" }} href='https://www.hackthebox.com' target="_blank" rel="noreferrer">
+                                            &nbsp;
+                                        Learn More</a></p>
                                 </div>
                             </div>
-                            <div className="blog-facts">
-                                <h4 className="blog-date">Oct 19, 2021</h4>
-                                <h2 className="blog-read">2 Minute Read</h2>
-                                <div className="blog-likes">
-                                    <img src={MediumClap} alt="Claps" />
-                                    <p>57</p>
-                                </div>
-                            </div>
+                           
                         </div>
                     </label>
                     <label style={blog3 ? {cursor: 'inherit'} : {cursor: "pointer"}} className="blog-card" htmlFor="blog-item-3" id="blog-slide-3" onClick={() => handleBlog3()}>
                         <div className="blog-content">
-                            <img className='blog-image' src={RubyBanner} alt="Ruby Banner" />
+                            <img className='blog-image' src={
+                                Tryhackme
+                            } alt="Ruby Banner" />
                             <div className="blog-text-content">
-                                <h1 className='blog-title'><a style={blog3 ? null : {pointerEvents: "none"}} href='https://medium.com/@venegasdavidm/the-best-ruby-enumerables-6d71fa5f933e' target="_blank" rel="noreferrer">The Best Ruby Enumerables</a></h1>
+                                <h1 className='blog-title'><a style={blog3 ? null : {pointerEvents: "none"}} href='https://tryhackme.com' target="_blank" rel="noreferrer">
+                                     Try Hack Me
+                                     </a></h1>
                                 <div className="blog-start-wrap">
-                                    <p className='blog-start'><i>Here are a few of the best ruby enumerables and methods:</i> <br /> <b>all?</b> <br /> Return true when all elements passed into the block are true. <br /> <b>any?</b> <br /> Return true when all at least one element<span id='blogStartResponsive'> results in true when</span>...&nbsp; <a style={blog3 ? null : {pointerEvents: "none"}} href='https://medium.com/@venegasdavidm/the-best-ruby-enumerables-6d71fa5f933e' target="_blank" rel="noreferrer">Read More</a></p>
+                                    <p className='blog-start'>
+                                        
+                                        "A gamified, hands-on cyber security training platform that you can access through your browser, with blue, red and purple team content for all skill levels."
+                                        <a style={blog3 ? null : {pointerEvents: "none"}} href='https://tryhackme.com' target="_blank" rel="noreferrer">
+                                            &nbsp;
+                                            Learn More</a></p>
                                 </div>
                             </div>
-                            <div className="blog-facts">
-                                <h4 className="blog-date">Nov 23, 2021</h4>
-                                <h2 className="blog-read">2 Minute Read</h2>
-                                <div className="blog-likes">
-                                    <img src={MediumClap} alt="Claps" />
-                                    <p>65</p>
-                                </div>
-                            </div>
+                            
                         </div>
                     </label>
 

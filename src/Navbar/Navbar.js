@@ -3,8 +3,6 @@ import { NavLink } from 'react-router-dom'
 import { useNavigate } from 'react-router-dom'
 import { FaGithub, FaLinkedin } from "react-icons/fa"
 import Logo from '../Media/Images/logo.png'
-
-
 import React, { Fragment, useEffect, useState } from 'react'
 /*
 <li className="nav-item" onClick={() => closeNav()}><NavLink to="/blogs" activeClassName="active" className="nav-link"><h1>Blogs</h1></NavLink></li>
@@ -36,14 +34,10 @@ function Navbar() {
                     <li className="nav-item" onClick={() => closeNav()}><NavLink to="/work" activeClassName="active" className="nav-link"><h1>Work</h1></NavLink></li>
 
 
-                    <li className="nav-item" onClick={() => closeNav()}><NavLink to="/globe" activeClassName="active" className="nav-link"><h1> Globe </h1></NavLink></li>
-
+                   
 
 
                     <li className="nav-item" onClick={() => closeNav()}><NavLink to="/security" activeClassName="active" className="nav-link"><h1> Security </h1></NavLink></li>
-
-
-                    <li className="nav-item" onClick={() => closeNav()}><NavLink to="/notes" activeClassName="active" className="nav-link"><h1> Curriculum </h1></NavLink></li>
 
 
 
