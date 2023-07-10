@@ -34,6 +34,8 @@ function Navbar() {
                     <li className="nav-item" onClick={() => closeNav()}><NavLink to="/work" activeClassName="active" className="nav-link"><h1>Work</h1></NavLink></li>
 
 
+                    <li className="nav-item" onClick={() => closeNav()}><NavLink to="/globe" activeClassName="active" className="nav-link"><h1> Earthship </h1></NavLink></li>
+
                    
 
 

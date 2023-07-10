@@ -8,7 +8,10 @@ const marker1 = { lat: 49.25, lon: -123.1, label: "Vancouver" };
 const marker2 = { lat: 35.6895, lon: 129.69171, label: "Tokyo", connected: true };
 const demoMarkers = [marker1, marker2];
 
-const MyGlobe = () => {
+
+
+
+export default function MyGlobe(props) {
 
 
 
@@ -27,22 +30,28 @@ const MyGlobe = () => {
         return () => window.removeEventListener('resize', cb)
     }, []);
 
+    
+
     const [markers, setMarkers] = React.useState([]);
     const [constellations, setConstellations] = React.useState([]);
 
     const demo = () => {
         console.log("Run demo");
-        // ADD MARKERS
-        setTimeout(() => setMarkers(demoMarkers), 4000);
 
+        
+        // ADD MARKERS
+        setTimeout(() => setMarkers(demoMarkers), 4000)
+        
+       
+        
         //ADD SATELLITES
         setTimeout(() => {
             const constellation = [];
             const opts = {
                 waveColor: "#FFF",
-                coreColor: "#FF0000",
-                shieldColor: "#fff",
-                numWaves: 8
+                coreColor: "yellow",
+                shieldColor: "gold",
+                numWaves: 13
             };
             const alt = 1.3;
 
@@ -55,7 +64,7 @@ const MyGlobe = () => {
                     });
                 }
             }
-
+            
             setConstellations([{
                 opts,
                 sats: constellation
@@ -65,14 +74,20 @@ const MyGlobe = () => {
 
     return (
         <EncomGlobe
+        
         width={state.width}
         height={state.height}
         markers={markers}
-        // satellites={satellites}
         constellations={constellations}
         globeReadyCb={demo}
+            globeConfig={{
+                ...EncomGlobe.defaultProps.globeConfig,
+                baseColor: "#00e6e6",
+                pinColor: "#FF69B8"
+            }}
+    
     />
     )
 }
 
-export default MyGlobe
+
