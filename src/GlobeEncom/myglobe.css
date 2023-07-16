@@ -1,13 +1,18 @@
 
-
 #globe-div {
-    padding: 3.5rem 0 3.5rem 18.5rem;
-    min-height: 100vh;
-    min-width: 100vh;
-    
-    background-color: #181818;
-    align-items: center;
-   
-    overflow: hidden;
-    
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: #181818;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+#canvas {
+    width: 100%;
+    height: 100%
 }

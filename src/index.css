@@ -5,11 +5,11 @@
   /* border: 1px solid red; */
 }
 
-:root {
-  --grey: #1f1f1f;
-}
 
 body {
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
   color: #ffffff;
   background-color: #181818;
 }
