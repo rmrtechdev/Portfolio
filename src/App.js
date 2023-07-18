@@ -22,7 +22,7 @@ function App() {
         <Route path='security' element={<Blogs /> } />
         
         <Route path='/globe' element={<MyGlobe /> } />
-        
+       
 
 
         <Route path="/contact" element={<Contact/>} />
