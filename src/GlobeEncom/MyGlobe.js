@@ -98,7 +98,7 @@ export default function MyGlobe() {
     }
 
     return (
-        <div className='work-container'>
+        <div className='globe-container'>
         <div className="globe-wrapper">
         <h1 className="globe-header">
                 <span>S</span>
