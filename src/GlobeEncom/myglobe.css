@@ -34,7 +34,7 @@
   align-items: center;
   justify-content: flex-start;
   flex-direction: column;
-  width: 100%;
+   width: 100%;
 }
 @keyframes portFade {
   100% {opacity: 1}

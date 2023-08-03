@@ -47,6 +47,7 @@
     "request": "~2.34.0",
     "serve-favicon": "~2.0.0",
     "three": "0.124.0",
+    "tween": "^0.9.0",
     "tween.js": "~0.13.0",
     "vec2": "~1.5.0",
     "web-vitals": "^2.1.4",
