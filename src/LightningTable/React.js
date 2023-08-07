@@ -28,23 +28,18 @@ const charToKeyCode = (char) => {
 };
 
 
+
 const KeyboardKey = ({ onClick, char, active }) => {
   const [isClicked, setIsClicked] = React.useState(false);
 
   const handleKeyPress = () => {
     setIsClicked(true);
     onClick(char);
+
+    setTimeout(() => {
+      setIsClicked(false);
+    }, 160);
   };
-
-  React.useEffect(() => {
-    if (isClicked) {
-      const timer = setTimeout(() => {
-        setIsClicked(false);
-      }, 200);
-
-      return () => clearTimeout(timer);
-    }
-  }, [isClicked]);
 
   return (
     <div
@@ -57,6 +52,7 @@ const KeyboardKey = ({ onClick, char, active }) => {
     </div>
   );
 };
+
 
 const Keyboard = () => {
   const commandTextRef = React.useRef(null);
@@ -90,7 +86,7 @@ const Keyboard = () => {
   ];
 
   return (
-    <div>
+    <div className="wrapper">
       <div id="lt-keyboard">
         {keyboardLayout.map((row, rowIndex) => (
           <div key={rowIndex} className="row">

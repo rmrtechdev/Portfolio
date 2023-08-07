@@ -145,7 +145,7 @@ export default function MyGlobe() {
                             select: ['latitude', 'longitude', 'height_km'],
                             pagination: true,
                             lean: true,
-                            limit: 366
+                            limit: 99
                         },
                     }),
                 });
@@ -172,6 +172,7 @@ export default function MyGlobe() {
         <div className='globe-container'>
         <div className="globe-wrapper">
         <h1 className="globe-header">
+          <div>
                 <span>S</span>
                 <span>p</span>
                 <span>a</span>
@@ -180,13 +181,15 @@ export default function MyGlobe() {
                 <span>s</span>
                 <span>h</span>
                 <span>i</span>
-                <span>p</span>&nbsp;
-            
-                <span>E</span>
+                <span>p</span>
+                </div>
+            <div className="wrapper">
+              <span>E</span>
                 <span>a</span>
                 <span>r</span>
                 <span>t</span>
                 <span>h</span>
+            </div>
                
         </h1>
         <p className="globe-description">
