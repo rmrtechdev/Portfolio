@@ -42,14 +42,14 @@ export default function MyGlobe() {
         const constellation = myData.map(item => ({
             lat: item.latitude,
             lon: item.longitude,
-            altitude: 1.3
+            altitude: 1.69
         }));
 
         const opts = {
             waveColor: "#FF69B4",
             coreColor: "red",
             shieldColor: "green",
-            numWaves: 17
+            numWaves: 6
         };
 
         setConstellations([{ opts, sats: constellation }]);
@@ -182,9 +182,9 @@ export default function MyGlobe() {
                 <span>h</span>
                 <span>i</span>
                 <span>p</span>
-                </div>
-            <div className="wrapper">
-              <span>E</span>
+               
+            
+             <span> &nbsp;E</span>
                 <span>a</span>
                 <span>r</span>
                 <span>t</span>
@@ -223,8 +223,9 @@ export default function MyGlobe() {
                 ...EncomGlobe.defaultProps.globeConfig,
                 baseColor: "#08fdd8",
                 pinColor: "#DAA520",
-                viewAngle: 0.3,
-                data: data
+                viewAngle: 0.4,
+                data: data,
+                scale: .8
             }}
         />
         

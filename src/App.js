@@ -7,7 +7,7 @@ import Work from './3-Work/Work'
 import Blogs from './5-Blogs/Blogs'
 import Contact from './6-Contact/Contact'
 import MyGlobe from './GlobeEncom/MyGlobe'
-import Keyboard from './LightningTable/React.js'
+import Keyboard from './LightningTable/LightningTable'
 
 function App() {
   return (

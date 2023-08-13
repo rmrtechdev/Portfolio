@@ -1,0 +1,102 @@
+
+#lt-keyboard {
+  display: flex;
+  flex-direction: column; /* Display keyboard rows vertically */
+  align-items: center;
+  justify-content: flex-end; /* Align keyboard to the bottom */
+  margin-bottom: 1rem; /* Adjust margin for proper spacing */
+}
+
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: end ;
+  height: 100vh;
+  overflow-y: hidden; /* Deactivate y-axis scrolling */
+}
+
+.row {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 5px;
+}
+.key {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 66px;
+  height: 50px;
+  color: #08fdd8;
+  border: 1px solid #bbb;
+  border-radius: 5px;
+  font-size: 18px;
+  cursor: pointer;
+  margin: 2px;
+  transition: background-color 0.2s, color 0.2s, filter 0.2s; /* Added filter transition */
+}
+
+.key:hover {
+  background-color: #FF69B4;
+}
+
+.key-click-effect {
+  animation: blink-animation 366s; /* Added animation property */
+}
+
+@keyframes blink-animation {
+  0%, 100% {
+    background-color: #08fdd8;
+    color: #FF69B4;
+    filter: brightness(1); /* Reset brightness */
+  }
+  50% {
+    background-color: transparent;
+    color: #08fdd8;
+    filter: brightness(0.7); /* Dim brightness */
+  }
+}
+
+.input-container {
+  margin-bottom: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+
+   
+input {
+  width: 300px;
+  padding: 5px;
+  font-size: 18px;
+  border: none;
+  border-bottom: 1px solid #FF69B4;
+  background-color: transparent;
+  color: #08ffd8;
+  outline: none;
+  
+}
+
+.blinking-cursor {
+  animation: blink 1s infinite;
+}
+
+@keyframes blink {
+  0%, 100% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+}
+
+img {
+  display: flex;
+  flex-direction: column;
+  align-items: top;
+  justify-content: start;
+  margin: 66px
+}
