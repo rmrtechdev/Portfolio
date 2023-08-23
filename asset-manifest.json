@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/portfolio/static/css/main.29b0793a.css",
-    "main.js": "/portfolio/static/js/main.221b1eb2.js",
+    "main.css": "/portfolio/static/css/main.de0199bb.css",
+    "main.js": "/portfolio/static/js/main.cab162fc.js",
     "static/media/3jsx.gif": "/portfolio/static/media/3jsx.c8ecb776b604aa48f5ec.gif",
     "static/media/CommerceNxt.gif": "/portfolio/static/media/CommerceNxt.a30c1da1ea75ab6e78b2.gif",
     "static/media/Chatroom.gif": "/portfolio/static/media/Chatroom.6773c6543cbb63f0c99d.gif",
@@ -25,11 +25,11 @@
     "static/media/react.png": "/portfolio/static/media/react.386dce8c87dd89b9617b.png",
     "static/media/restful-api.png": "/portfolio/static/media/restful-api.5c29c4fc5673b5b04809.png",
     "index.html": "/portfolio/index.html",
-    "main.29b0793a.css.map": "/portfolio/static/css/main.29b0793a.css.map",
-    "main.221b1eb2.js.map": "/portfolio/static/js/main.221b1eb2.js.map"
+    "main.de0199bb.css.map": "/portfolio/static/css/main.de0199bb.css.map",
+    "main.cab162fc.js.map": "/portfolio/static/js/main.cab162fc.js.map"
   },
   "entrypoints": [
-    "static/css/main.29b0793a.css",
-    "static/js/main.221b1eb2.js"
+    "static/css/main.de0199bb.css",
+    "static/js/main.cab162fc.js"
   ]
 }
