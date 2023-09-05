@@ -181,7 +181,7 @@ export default function MyGlobe() {
                 <span>s</span>
                 <span>h</span>
                 <span>i</span>
-                <span>p</span>
+                <span>p&nbsp;</span> 
                
             
              <span> &nbsp;E</span>

@@ -3,17 +3,22 @@
   display: flex;
   flex-direction: column; /* Display keyboard rows vertically */
   align-items: center;
-  justify-content: flex-end; /* Align keyboard to the bottom */
-  margin-bottom: 1rem; /* Adjust margin for proper spacing */
+  //justify-content: right; /* Align keyboard to the bottom */
+  //margin-bottom: 1rem; /* Adjust margin for proper spacing */
+ 
 }
+
+
+
 
 
 .wrapper {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: end ;
+  justify-content: flex-end ;
   height: 100vh;
+  padding: 2.5rem 0 1rem 16rem;
   overflow-y: hidden; /* Deactivate y-axis scrolling */
 }
 
@@ -21,6 +26,7 @@
   display: flex;
   justify-content: center;
   margin-bottom: 5px;
+  
 }
 .key {
   display: flex;
@@ -59,7 +65,7 @@
 }
 
 .input-container {
-  margin-bottom: 10px;
+  margin: 10px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -98,5 +104,28 @@ img {
   flex-direction: column;
   align-items: top;
   justify-content: start;
-  margin: 66px
+  margin: 66px;
+  padding: 66px;
+  height: 88%;
+}
+
+.image-container {
+  position: relative;
+  display: inline-block;
+  text-align: center; /* Center the popover */
+  margin: 10px;
+  padding: 10px;
+}
+
+.image-container img {
+  height: auto;
+  max-width: auto; /* Ensure images don't exceed their container */
+  transition: transform 0.3s, opacity 0.3s;
+}
+
+
+
+.image-container img:hover {
+  transform: scale(1.1); /* Increase the size on hover */
+  opacity: 0.8; /* Reduce opacity on hover */
 }

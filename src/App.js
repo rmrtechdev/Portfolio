@@ -8,9 +8,12 @@ import Blogs from './5-Blogs/Blogs'
 import Contact from './6-Contact/Contact'
 import MyGlobe from './GlobeEncom/MyGlobe'
 import Keyboard from './LightningTable/LightningTable'
+import { StyledEngineProvider } from '@mui/material/styles';
+
 
 function App() {
   return (
+    <StyledEngineProvider>
     <Fragment>
       <Navbar/>
       <Routes>
@@ -32,7 +35,8 @@ function App() {
 
                </Routes>
     </Fragment>
-  )
+    </StyledEngineProvider>
+      )
 }
 
 export default App

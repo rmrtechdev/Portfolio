@@ -1,13 +1,62 @@
 
 import './lightning.css'
-import Folder from '../Media/encom_folder_big.png'
+import Folder from '../Media/Images/encom_folder_big.png'
 import React, { useEffect, useState, useRef } from "react";
+import Popover from '@mui/material/Popover';
+import Typography from '@mui/material/Typography';
+import { GiWhiteBook } from 'react-icons/gi';
 
+function MouseOverPopover() {
+  const [anchorEl, setAnchorEl] = React.useState(null);
 
+  const handlePopoverOpen = (event) => {
+    setAnchorEl(event.currentTarget);
+  };
 
+  const handlePopoverClose = () => {
+    setAnchorEl(null);
+  };
 
+  const open = Boolean(anchorEl);
 
- 
+  return (
+    <div>
+      <Typography
+        aria-owns={open ? 'mouse-over-popover' : undefined}
+        aria-haspopup="true"
+        onMouseEnter={handlePopoverOpen}
+        onMouseLeave={handlePopoverClose}
+      >
+       <img src={Folder} alt="Folder" />
+      </Typography>
+      <Popover
+        id="mouse-over-popover"
+        sx={{
+          pointerEvents: 'none',
+         
+        }}
+        open={open}
+        anchorEl={anchorEl}
+        anchorOrigin={{
+          vertical: 'bottom',
+          horizontal: 'center',
+        }}
+        transformOrigin={{
+          vertical: 'top',
+          horizontal: 'center',
+        }}
+        onClose={handlePopoverClose}
+        disableRestoreFocus
+      >
+        <Typography sx={{ p: 1,
+         backgroundColor: '#181818',
+         color: 'white',
+         fontSize: '18px' }}> Data Structures & Algo's.</Typography>
+      </Popover>
+    </div>
+  );
+}
+
 
 const charToKeyCode = (char) => {
   if (char === "SHIFT1" || char === "SHIFT2") {
@@ -34,16 +83,17 @@ const charToKeyCode = (char) => {
 
 
 const KeyboardKey = ({ onClick, char, active }) => {
-  const [isClicked, setIsClicked] = React.useState(false);
   const [isKeyActive, setIsKeyActive] = React.useState(false);
 
+
+ 
+
   const handleKeyPress = () => {
-    setIsClicked(true);
     setIsKeyActive(true);
     onClick(char);
 
     setTimeout(() => {
-      setIsClicked(false);
+      setIsKeyActive(false);
     }, 160);
   };
 
@@ -64,15 +114,36 @@ const KeyboardKey = ({ onClick, char, active }) => {
     };
   }, [char]);
 
+
+
+    React.useEffect(() => {
+      const KeyClickListener = (e) => {
+        if (charToKeyCode(char) === e.keyCode) {
+          setIsKeyActive(true);
+          setTimeout(() => {
+            setIsKeyActive(false);
+          }, 160);
+        }
+      };
+
+    window.addEventListener("keydown", KeyClickListener);
+
+    return () => {
+      window.removeEventListener("keydown", KeyClickListener);
+    };
+  }, [char]);
+
   return (
     <div
       className={`key ${active ? "key-white" : "key-blue"} ${
-        isClicked || isKeyActive ? "key-click-effect" : ""
+          isKeyActive ? "key-click-effect" : ""
       }`}
       onClick={handleKeyPress}
     >
       {char}
     </div>
+
+    
   );
 };
 
@@ -101,15 +172,17 @@ const Keyboard = () => {
   
   const handleKeyPress = (char) => {
     writeKeyStroke(char);
+
+    setInputValue((prevInputValue) => prevInputValue + char); // Append the pressed character
+
+    
     setActiveKeys((prevActiveKeys) =>
       prevActiveKeys.includes(char)
         ? prevActiveKeys.filter((key) => key !== char)
         : [...prevActiveKeys, char]
     );
-    
   };
 
- 
 
   const writeKeyStroke = (char) => {
     const txt = commandTextRef.current;
@@ -130,9 +203,18 @@ const Keyboard = () => {
 
   
   return (
+
     
-      <div className="wrapper">
-       <img src={Folder} ></img>
+    <div className="wrapper">
+
+      <div className="image-container">
+      <MouseOverPopover />
+
+
+      </div>
+      
+   
+     
       <div className="input-container">
         <input
           type="text"
@@ -144,145 +226,28 @@ const Keyboard = () => {
           style={{ caretColor: "#08ffd8" }}
         />
       </div>
+   
         {keyboardLayout.map((row, rowIndex) => (
           <div key={rowIndex} className="row">
             {row.map((char, colIndex) => (
               <KeyboardKey
-                key={char}
-                onClick={handleKeyPress}
-                char={char}
-                active={activeKeys.includes(char)}
+              key={char}
+             
+              onClick= {handleKeyPress}
+                
+              
+              char={char}
+              active={activeKeys.includes(char)}
               />
             ))}
           </div>
         ))}
-      </div>
      
+
+    </div>
+
   );
 };
 
 export default Keyboard;
 
-
-const CommandLines = () => {
-  // Implement the JSX for the command lines here
-
-   
-  return (
-    <div>
-      <CommandLines />
-    </div>
-  );
-};
-
-const CommandPrompt = () => {
-  const [currentDir, setCurrentDir] = useState("encom_root");
-  const [keyBuffer, setKeyBuffer] = useState([]);
-  const [keysRunning, setKeysRunning] = useState(false);
-  const [activeKey, setActiveKey] = useState(null);
-
-  const handleKeyClick = (keyCode) => {
-    // Perform any logic needed when a key is clicked
-    // For example, update the active key in state
-    setActiveKey(keyCode);
-    // ... Additional logic ...
-  };
-  return (
-    <div>
-      {/* ... Your other JSX code ... */}
-
-      {/* Use the KeyboardKey component */}
-      <KeyboardKey />
-    </div>
-  );
-
-  const writeResponse = (txt) => {
-    // You can implement this function if needed.
-    // Instead of appending to a DOM element, use React state to store responses.
-  };
-
-  const writePrompt = () => {
-    // You can implement this function if needed.
-    // Instead of appending to a DOM element, use React state to store the prompt.
-  };
-
-  const writeLs = (exec) => {
-    // You can implement this function if needed.
-    // Instead of appending to a DOM element, use React state to store the ls output.
-  };
-
-  const executeCommand = () => {
-    // You can implement this function if needed.
-    // Instead of reading from DOM elements, use React state to retrieve the command.
-    // Replace DOM manipulations with state updates and setKeyBuffer, etc.
-  };
-
-  const simulateCommand = (command) => {
-    // You can implement this function if needed.
-    // Instead of using simulateKey, use React state to manage the keyBuffer and keysRunning.
-    //var cs = command.split("");
-    //for (var i = 0; i < cs.length; i++) {
-      //simulateKey(charToKeyCode(cs[i]));
-    }
-  };
-
-
-  /*const writeKeyStroke = (keycode) => {
-    // You can implement this function if needed.
-    // Instead of manipulating the DOM, use React state to store the command text.
-    var txt = (".command-text").last();
-    switch(keycode){
-        case 8: 
-            txt.text(txt.text().substring(0,txt.text().length-1));
-        break;
-        case 27: 
-            txt.text("");
-        break;
-        case 13:
-            executeCommand();
-        break;
-        case 189:
-            txt.append("_");
-        break;
-        case 187:
-            txt.append("=");
-        break;
-        case 219:
-            txt.append("{");
-        break;
-        case 221:
-            txt.append("}");
-        break;
-        case 186:
-            txt.append(";");
-        break;
-        case 222:
-            txt.append("'");
-        break;
-        case 188:
-            txt.append(",");
-        break;
-        case 190:
-            txt.append(".");
-        break;
-        case 191:
-            txt.append("/");
-        break;
-        case 192:
-            txt.append("~");
-        break;
-        case 500:
-            txt.append("");
-        break;
-        default:
-            var key = String.fromCharCode(keycode).toLowerCase();
-        txt.append(key)
-    };
-  };
-
-
-
-
-
- 
-*/
