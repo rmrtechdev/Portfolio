@@ -7,13 +7,10 @@ import Work from './3-Work/Work'
 import Blogs from './5-Blogs/Blogs'
 import Contact from './6-Contact/Contact'
 import MyGlobe from './GlobeEncom/MyGlobe'
-import Keyboard from './LightningTable/LightningTable'
-import { StyledEngineProvider } from '@mui/material/styles';
 
 
 function App() {
   return (
-    <StyledEngineProvider>
     <Fragment>
       <Navbar/>
       <Routes>
@@ -22,7 +19,6 @@ function App() {
        
         <Route path="/work" element={<Work/>} />
 
-        <Route path="/keyboard" element={<Keyboard />} />
         <Route path='security' element={<Blogs /> } />
         
         <Route path='/globe' element={<MyGlobe /> } />
@@ -35,7 +31,6 @@ function App() {
 
                </Routes>
     </Fragment>
-    </StyledEngineProvider>
       )
 }
 

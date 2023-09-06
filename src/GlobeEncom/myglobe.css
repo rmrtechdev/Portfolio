@@ -56,7 +56,7 @@
   opacity: 0;
 }
 .globe-header span {
-  display: inline-flex;
+  display: inline-block;
   transition: color .35s ease;
 }
 .globe-header span:hover {
@@ -64,6 +64,8 @@
 ;
   animation: contactBounce 1s ease forwards;
 }
+
+
 .globe-description {
   margin-top: 2.75rem;
   font-size: 1.85rem;
@@ -96,3 +98,22 @@
 @keyframes descFadeIn {
   100% {opacity: 1; filter: blur(0)}
 }
+
+@media (max-width: 950px) {
+  .globe-header {
+      font-size: 5.5rem;
+  }
+}
+
+@media (max-width: 650px) {
+  
+    .globe-header {
+        font-size: 4.5rem;
+    }
+}
+
+@media (max-width: 480px) {
+      .globe-header {
+          font-size: 4rem;
+      }
+    }
