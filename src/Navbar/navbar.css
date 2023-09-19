@@ -107,7 +107,9 @@
 .navbar-bottom {
     margin: 2rem 0 5rem;
     display: flex;
+    position: bottom;
     gap: 2rem;
+    margin-top: 6rem;
 }
 .nav-icon {
     font-size: 2.5rem;

@@ -14,18 +14,18 @@ function App() {
     <Fragment>
       <Navbar/>
       <Routes>
-        <Route path="/" element={<About/>} />
-        <Route path="/skills" element={<Skills/>} />
+        <Route exact path="/" element={<About/>} />
+        <Route exact path="/skills" element={<Skills/>} />
        
-        <Route path="/work" element={<Work/>} />
+        <Route exact path="/work" element={<Work/>} />
 
-        <Route path='security' element={<Blogs /> } />
+        <Route exact path='security' element={<Blogs /> } />
         
-        <Route path='/globe' element={<MyGlobe /> } />
+        <Route exact path='/globe' element={<MyGlobe /> } />
        
 
 
-        <Route path="/contact" element={<Contact/>} />
+        <Route exact path="/contact" element={<Contact/>} />
 
       
 
