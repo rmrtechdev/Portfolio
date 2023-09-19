@@ -42,20 +42,22 @@ export default function MyGlobe() {
         const constellation = myData.map(item => ({
             lat: item.latitude,
             lon: item.longitude,
-            altitude: 1.69
+            altitude: Math.floor((Math.random() * 1.4 ) + 2)
         }));
 
         const opts = {
             waveColor: "#FF69B4",
             coreColor: "red",
             shieldColor: "green",
-            numWaves: 6
+            numWaves: 4
         };
+        console.log(constellation)
+    
 
         setConstellations([{ opts, sats: constellation }]);
     }, [myData]);
     console.log(myData)
-    
+   
 
 
 
@@ -145,7 +147,7 @@ export default function MyGlobe() {
                             select: ['latitude', 'longitude', 'height_km'],
                             pagination: true,
                             lean: true,
-                            limit: 99
+                            limit: 999
                         },
                     }),
                 });
@@ -225,7 +227,8 @@ export default function MyGlobe() {
                 pinColor: "#DAA520",
                 viewAngle: 0.4,
                 data: data,
-                scale: .8
+                scale: .8,
+                dayLength: 2100 * 17,
             }}
         />
         
