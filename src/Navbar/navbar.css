@@ -137,7 +137,7 @@
 }
 @media (max-width: 1100px) {
     .navbar-toggle-button {
-        position: fixed;
+        position: absolute;
         display: flex;
         align-items: center;
         justify-content: center;
@@ -150,6 +150,7 @@
         border-radius: 3px;
         z-index: 899;
         cursor: pointer;
+       
     }
     .navbar-toggle-button .navbar-line {
         height: 4px;
