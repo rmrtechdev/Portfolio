@@ -54,8 +54,46 @@
 }
 .nav-link {
     color: #909096;
-    text-decoration: none;
+    text-decoration: none;  
 }
+
+#saleor {
+    transform: scale(.95); 
+    color: #FF69B4;
+    font-size: 2rem;
+    font-weight: 400;
+    line-height: 2.85;
+    border-bottom: 1px solid #282828;
+    transition: transform .1s ease;
+    cursor: pointer;
+}
+
+#saleor::after .nav-link{
+    content: '';
+    position: absolute;
+    right: 0;
+    top: 0;
+    height: 0;
+    width: .2rem;
+    background-color: transparent;
+}
+#saleor:hover::after {
+    height: 100%;
+    background-color: #08fdd8;
+}
+
+
+#saleor.active h1 {
+    height: 100%;
+    background-color: #08fdd8;
+
+        color: #FF69B4;
+}
+#saleor h1:hover {
+    color: #ffffff;
+    transform: scale(1.085);
+}
+
 #first-nav-link {
     border-top: 1px solid #282828;
 }

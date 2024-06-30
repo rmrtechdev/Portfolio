@@ -7,6 +7,7 @@ import Work from './3-Work/Work'
 import Blogs from './5-Blogs/Blogs'
 import Contact from './6-Contact/Contact'
 import MyGlobe from './GlobeEncom/MyGlobe'
+import Storefront from './Saleor/Storefront'
 
 
 function App() {
@@ -18,6 +19,8 @@ function App() {
         <Route exact path="/skills" element={<Skills/>} />
        
         <Route exact path="/work" element={<Work/>} />
+
+        <Route exact path="/saleor" element={<Storefront/>} />
 
         <Route exact path='security' element={<Blogs /> } />
         

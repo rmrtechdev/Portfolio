@@ -7,9 +7,26 @@ import React, { Fragment, useEffect, useState } from 'react'
 /*
 <li className="nav-item" onClick={() => closeNav()}><NavLink to="/blogs" activeClassName="active" className="nav-link"><h1>Blogs</h1></NavLink></li>
 */
+
+
+
 function Navbar() {
     const navigate = useNavigate()
     const closeNav = () => setNavActive(false)
+
+
+
+const [openModal, setOpenModal] = useState(false)
+
+
+
+function handleOpenModal() {
+        setOpenModal(true)
+}
+
+
+
+
     const [navActive, setNavActive] = useState(false)
     useEffect(() => {navActive ?  document.body.style.overflow = 'hidden' : document.body.style.overflow = 'unset'}, [navActive])
     function handleLogoClick() {
@@ -33,8 +50,11 @@ function Navbar() {
                     <li className="nav-item" onClick={() => closeNav()}><NavLink to="/skills" activeClassName="active" className="nav-link"><h1>Skills</h1></NavLink></li>
                     <li className="nav-item" onClick={() => closeNav()}><NavLink to="/work" activeClassName="active" className="nav-link"><h1>Work</h1></NavLink></li>
 
+                    <li className="nav-item" id="saleor" onClick={() => closeNav()}><NavLink to="/saleor" activeClassName="active" className="nav-link" id="saleor"  ><h1>For Sale</h1></NavLink></li>
+                    
 
-                    <li className="nav-item" onClick={() => closeNav()}><NavLink to="/globe" activeClassName="active" className="nav-link"><h1> Earthship </h1></NavLink></li>
+
+                    <li className="nav-item" onClick={() => closeNav()} ≥/÷÷≥  ≤./</ul>><NavLink to="/globe" activeClassName="active" className="nav-link"><h1> Earthship </h1></NavLink></li>
 
                    
 
