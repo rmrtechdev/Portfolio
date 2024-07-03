@@ -4,9 +4,29 @@ import { useNavigate } from 'react-router-dom'
 import { FaGithub, FaLinkedin } from "react-icons/fa"
 import Logo from '../Media/Images/logo.png'
 import React, { Fragment, useEffect, useState } from 'react'
+import  Storefront  from '../Saleor/Storefront'
+import Modal from '../Saleor/Modal'
+
+
+import M3jsx from '../Media/Gifs/3jsx.gif'
+import CommerceNxt from '../Media/Gifs/CommerceNxt.gif'
+import Chatroom from '../Media/Gifs/Chatroom.gif'
+
+
+import M3jsxLogo from '../Media/Images/portfolio-logos/3jsxLogo.jpg'
+import CommerceNxtLogo from '../Media/Images/portfolio-logos/CommerceNxtLogo.jpg'
+import ChatroomLogo from '../Media/Images/portfolio-logos/ChatroomLogo.jpg'
+
+
+
+
+ 
+
+
 /*
 <li className="nav-item" onClick={() => closeNav()}><NavLink to="/blogs" activeClassName="active" className="nav-link"><h1>Blogs</h1></NavLink></li>
 */
+
 
 
 
@@ -14,17 +34,20 @@ function Navbar() {
     const navigate = useNavigate()
     const closeNav = () => setNavActive(false)
 
+    
+    useEffect(() => {window.scrollTo(0, 0)}, [])
+    const [port1, setPort1] = useState(false)
+    const [port2, setPort2] = useState(false)
+    const [port3, setPort3] = useState(false)
+    
+ const [modalID, setModalID] = useState(null)
+ const [openModal, setOpenModal] = useState(false)
 
-
-const [openModal, setOpenModal] = useState(false)
-
-
-
-function handleOpenModal() {
+ function handleOpenModal(id) {
+        setModalID(id)
+     
         setOpenModal(true)
-}
-
-
+    }
 
 
     const [navActive, setNavActive] = useState(false)
@@ -33,13 +56,23 @@ function handleOpenModal() {
         navigate('/contact')
         closeNav()
     }
+
+
     return (
+        
+        
         <Fragment>
-            <p className="navbar-toggle-button" onClick={() => setNavActive(!navActive)}>
+            <div>
+            <Modal open={openModal} setOpenModal={setOpenModal} modalID={modalID} />
+
+            </div>
+                    
+                   
+            <span className="navbar-toggle-button" onClick={() => setNavActive(!navActive)}>
                 <span className={navActive ? "navbar-line navActive" : "navbar-line"}></span>
                 <span className={navActive ? "navbar-line navActive" : "navbar-line"}></span>
                 <span className={navActive ? "navbar-line navActive" : "navbar-line"}></span>
-            </p>
+            </span>
             <div className={navActive ? "navbar-container navActive" : "navbar-container"}>
                 <div className="navbar-top">
                     <img src={Logo} alt="DV" onClick={() => handleLogoClick()} />
@@ -50,11 +83,14 @@ function handleOpenModal() {
                     <li className="nav-item" onClick={() => closeNav()}><NavLink to="/skills" activeClassName="active" className="nav-link"><h1>Skills</h1></NavLink></li>
                     <li className="nav-item" onClick={() => closeNav()}><NavLink to="/work" activeClassName="active" className="nav-link"><h1>Work</h1></NavLink></li>
 
-                    <li className="nav-item" id="saleor" onClick={() => closeNav()}><NavLink to="/saleor" activeClassName="active" className="nav-link" id="saleor"  ><h1>For Sale</h1></NavLink></li>
+                    <li className="nav-item" id="saleor"  onClick={() => handleOpenModal(1)}> <NavLink to="/saleor" activeClassName="active" className="nav-link" id="saleor"  ><h1>For Sale</h1></NavLink></li>
                     
+                
+            
 
 
-                    <li className="nav-item" onClick={() => closeNav()} ≥/÷÷≥  ≤./</ul>><NavLink to="/globe" activeClassName="active" className="nav-link"><h1> Earthship </h1></NavLink></li>
+
+                    <li className="nav-item"  onClick={() => closeNav()}><NavLink to="/globe" activeClassName="active" className="nav-link"><h1> Earthship </h1></NavLink></li>
 
                    
 

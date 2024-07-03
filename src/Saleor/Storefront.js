@@ -1,4 +1,4 @@
-import './modal.css'
+import './storefront.css'
 import React from 'react'
 //import './otheritem.css'
 //import OtherItem from './OtherItem'
@@ -6,112 +6,100 @@ import { useEffect, useState } from 'react'
 import { useNavigate } from 'react-router-dom'
 import { BsBoxArrowUpRight } from 'react-icons/bs'
 import { useInView } from 'react-intersection-observer'
-import './modal.css'
+import SaleorLogo from '../Media/Images/portfolio-logos/SaleorLogo.jpg'
 
-import { ImCross } from 'react-icons/im'
-
-
-// Main Logos
-
-import M3jsx from '../Media/Gifs/3jsx.gif'
-import CommerceNxt from '../Media/Gifs/CommerceNxt.gif'
-import Chatroom from '../Media/Gifs/Chatroom.gif'
-
-
-import M3jsxLogo from '../Media/Images/portfolio-logos/3jsxLogo.jpg'
-import CommerceNxtLogo from '../Media/Images/portfolio-logos/CommerceNxtLogo.jpg'
-import ChatroomLogo from '../Media/Images/portfolio-logos/ChatroomLogo.jpg'
+import Saleor from '../Media/Gifs/Saleor.gif'
 
 
 
-function Storefront({open, setOpenModal, modalID}) {
-    useEffect(() => 
-        {open ? document.body.style.overflow = 'hidden' : document.body.style.overflow = 'unset'}, [open])
-    const modalData = [
-        {id: 2, 
-            title: "Next.JS E-commerce Demo",
-            logo: {},
-            desc: "With Grocery Magix™ users can search through millions of recipes, pick their favorites and instantly generate grocery lists. It uses Edamam's Recipe API to provide over 2.3 million recipes. Easily customize your meals and aggregate them into concise grocery lists.", 
-            features: ["Millions of recipes", "Over 30 recipe search filters", "Secure Register/Login system", "Fully responsive"],
-            tools: [{}],
-            technologies: {
-                frontend: "React, Redux, Context API, Vanilla CSS",
-                backend: "Firebase Auth, Firebase Firestore"
-            },
-            link: "www.grocerymagix.com",
-            url: "https://www.grocerymagix.com/",
-            github: "https://github.com/davidmvenegas/GroceryMagix",
-            video: "https://www.youtube.com/embed/05RJu6q-kU0"
-        },
-      
-    ]
-    useEffect(() => {
-        if (modalID !== null) {
-            const currentID = modalData.findIndex(x => x.id === modalID)
-            setCurrentData(modalData[currentID])
-        }
-        if (!open) setCurrentData({})
-    // eslint-disable-next-line
-    }, [modalID, open])
-    const [currentData, setCurrentData] = useState({})
+
+function Storefront() {
+    /*useEffect(() => {window.scrollTo(0, 0)}, [])
+    const navigate = useNavigate()
+    const [port1, setPort1] = useState(false)
+
+    
+    const [otherSepRef, otherSepInView] = useInView({threshold: 0, triggerOnce: true})
+    
+    
+    
     return (
-        <div key={currentData?.id} className='modal-container' style={open ? null : {display: "none"}}>
-            <ImCross id="leave-modal" onClick={() => setOpenModal(false)}/>
-            <div className="modal-wrapper">
-                <div className="modal-video-wrapper">
-                    <h1 className="modal-video-title">2 Minute Video Demonstration <br /><span>of</span><br /> <span>{currentData?.title}</span></h1>
-                    <div className="iframe-wrapper">
-                        <iframe 
-                            width="560" 
-                            height="315" 
-                            src={currentData?.video} 
-                            title={currentData?.title}
-                            frameBorder="0" 
-                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; fullscreen; gyroscope; picture-in-picture"
-                            allowFullScreen="allowfullscreen"
-                        ></iframe>
-                    </div>
-                    <div className="modal-tech-wrapper">
-                        <h1>Technologies Used</h1>
-                        <div className="modal-techs"><span>Frontend:&nbsp;</span>{currentData?.technologies?.frontend}</div>
-                        <div className="modal-techs"><span>Backend:&nbsp;</span>{currentData?.technologies?.backend}</div>
-                    </div>
-                </div>
-                <div className="modal-text-wrapper">
-                    <div className="modal-header">
-                        <div className="modal-title-wrapper">
-                            <img src={currentData?.logo} alt="Logo" />
-                            <h1 className="modal-title">{currentData?.title}</h1>
-                        </div>
-                        <div className="modal-links">
-                            <a className="modal-link1" href={currentData?.url} target="_blank" rel="noreferrer">{currentData?.link}</a>
-                            &nbsp;&nbsp; - &nbsp;&nbsp;
-                            <a className="modal-link2" href={currentData?.github} target="_blank" rel="noreferrer">
+        <div className='work-container'>
+            <div className="port-wrapper">
+                <h1 className="port-header">
+                        <span>  </span>
+                        <span>  </span>&nbsp;
+                        <span>  </span>
+                        <span>   </span>
+                        <span>   </span>
+                        <span>  </span>
+                        <span>   </span>
+                        <span>   </span>
+                        <span>    </span>
+                        <span>   </span>
+                        <span>   </span>
+                </h1>
+               
+
+
+                <div className="port-items">
+
+                    <div className="port-item" id='portItem1' onMouseEnter={() => setPort1(true)} onMouseLeave={() => setPort1(false)}>
+                        <div className="port-gif-box">
+                            <div className="port-gif-wrapper">
+
                                 
+                                <img className='port-gif' src={Saleor} alt="My Three.JS Demo Gif" style={port1 ? {opacity: "1"} : {opacity: "0"}}/>
+                                <img className='port-gif port-gif-logo' src={ SaleorLogo} style={port1 ? {opacity: "0"} : {opacity: "1"}}/>
+                            </div>
+
+                            <a href='http://heikojan2010.github.io/jsx3/' target="_blank" rel="noreferrer">
+                                <div className="portGifPopup">
+                                    <p>Go to site</p>
+                                    <BsBoxArrowUpRight id='goToSitePort'/>
+                                </div>
                             </a>
                         </div>
-                        <div className="modal-tools-wrapper">
-                            {currentData?.tools?.map(Tool => 
-                                <Tool className="modal-tool"/>
-                            )}
-                        </div>
-                    </div>
-                    <div className="modal-body">
-                        <p className="modal-description">{currentData?.desc}</p>
-                        <p className="modal-features-header">Features include:</p>
-                        <ul className="modal-features">
-                            {currentData?.features?.map(feature => (
-                                <li className="modal-feature">{feature}</li>
-                            ))}
-                        </ul>
-                        <div className="modal-visit-site">
-                            <a className='modal-visit-btn' href={currentData?.url} target="_blank" rel="noreferrer">VISIT WEBSITE</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    )
-}
 
-export default Storefront;
+                        <div className="port-text-box">
+                            <h1 className="port-title"> Full Stack eCommerce Store</h1>
+                           
+                    
+                            <p className="port-headline"> Powered by the Saleor eCommerce platform  &amp; integrated with a Next.JS Vercel frontend app.</p>
+
+                            <div className="port-btn-box">
+
+                                <div className="modal-tech-wrapper">
+                                    <h1>Technologies Used</h1>
+                                    <div className="modal-techs">
+                                        HTML &amp; Three.JS
+                                    </div>
+                                </div>
+                            </div>
+                           
+                        </div>
+                    </div>
+
+
+
+                   
+                            
+                                   
+                                
+                     
+
+
+                    
+                       
+                </div>
+
+              
+
+
+            </div>
+             </div>
+    )
+             */
+    }
+
+export default Storefront

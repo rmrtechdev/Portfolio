@@ -1,4 +1,4 @@
-import React, { Fragment } from "react"
+import React, { useState, Fragment } from "react"
 import { Routes, Route } from "react-router-dom"
 import Navbar from './Navbar/Navbar'
 import About from './1-About/About'
@@ -7,10 +7,11 @@ import Work from './3-Work/Work'
 import Blogs from './5-Blogs/Blogs'
 import Contact from './6-Contact/Contact'
 import MyGlobe from './GlobeEncom/MyGlobe'
-import Storefront from './Saleor/Storefront'
+import  Storefront  from './Saleor/Storefront'
 
 
 function App() {
+ 
   return (
     <Fragment>
       <Navbar/>

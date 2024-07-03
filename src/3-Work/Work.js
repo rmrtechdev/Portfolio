@@ -30,6 +30,9 @@ function Work() {
     const [port2, setPort2] = useState(false)
     const [port3, setPort3] = useState(false)
     
+   
+
+
     const [otherSepRef, otherSepInView] = useInView({threshold: 0, triggerOnce: true})
     
     
@@ -88,6 +91,7 @@ function Work() {
 
                         <div className="port-text-box">
                             <h1 className="port-title">3D Immersive U/I Site</h1>
+                           
                            
                     
                             <p className="port-headline">A demo fan page utilizing Three.js as a cross-browser JavaScript library used to create and display animated 3D computer graphics.</p>

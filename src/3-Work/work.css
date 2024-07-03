@@ -19,7 +19,7 @@
 }
 .port-header {
     position: relative;
-    : white;
+    color: white;
     font-size: 6.25rem;
     font-weight: 600;
     animation: skilsHeadFade 2s ease forwards;
@@ -70,12 +70,64 @@
 }
 
 #port-contact-slide span {
-    color: # 00e6e6
+    color: #00e6e6
 ;
     text-decoration: underline;
     cursor: pointer;
 }
 /* PORTFOLIO */
+
+.port-btn-box {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    width: 100%;
+}
+.port-btn-more {
+    position: relative;
+    display: block;
+    width: 20rem;
+    height: 4.5rem;
+    font-size: 1.85rem;
+    color: white;
+    background-color: black;
+    outline: 1px solid #08fdd8;
+    border: none;
+    border-radius: .5rem;
+    cursor: pointer;
+    overflow: hidden;
+    transition: all .2s ease;
+}
+.port-btn-more:hover {
+    background-color: rgba(255, 255, 255, .05);
+}
+.port-btn-more:hover > #port-more-text {
+    left: -125%;
+    transform: translate(125%, -50%);
+}
+.port-btn-more:hover > #port-more-arrow {
+    left: 50%;
+    transform: translate(-50%, -50%) scale(1.25);
+    -webkit-transform: translate(-50%, -50%) scale(1.25);
+}
+#port-more-text {
+    position: absolute;
+    width: fit-content;
+    top: 50%;
+    left: 30%;
+    transform: translate(-30%, -50%);
+    transition: all .2s ease;
+}
+#port-more-arrow {
+    position: absolute;
+    font-size: 2.65rem;
+    width: fit-content;
+    top: 50%;
+    left: 78.5%;
+    transform: translate(-82.5%, -50%);
+    -webkit-transform: translate(-51%, -50%);
+    transition: all .2s ease;
+}
 .port-items {
     display: grid;
     grid-template-rows: auto auto auto auto;

@@ -15,7 +15,7 @@
 }
 */
 
-c
+
 .globe-container, canvas, EncomGlobe {
   //padding: 2.5rem 0rem 0rem 2.5rem;
   min-height: 100vh;
@@ -50,7 +50,7 @@ c
 }
 .globe-header {
   position: relative;
-  : white;
+  color: white;
   font-size: 6.25rem;
   font-weight: 600;
   animation: skilsHeadFade 2s ease forwards;
