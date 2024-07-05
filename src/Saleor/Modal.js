@@ -1,17 +1,37 @@
 import './modal.css'
 import { useEffect, useState } from 'react'
 import { ImCross } from 'react-icons/im'
-import { FaGithub } from "react-icons/fa"
-import { SiReact, SiThreedotjs, SiDjango, SiPython, SiVercel, SiGithub, SiRubyonrails, SiPostgresql } from 'react-icons/si'
+import { SiReact, SiThreedotjs, SiDjango, SiPython, SiVercel, SiGithub } from 'react-icons/si'
 import Saleor from '../Media/Gifs/Saleor.gif'
+import { NavLink } from 'react-router-dom'
+import { useNavigate } from 'react-router-dom'
+import { BsBoxArrowUpRight } from 'react-icons/bs'
+
+
+
 
 function Modal({open, setOpenModal, modalID}) {
     useEffect(() => {open ? document.body.style.overflow = 'hidden' : document.body.style.overflow = 'unset'}, [open])
-    const [port1, setPort1] = useState(false)
+
+
+
+    const [navActive, setNavActive] = useState(false)
+    useEffect(() => {navActive ?  document.body.style.overflow = 'hidden' : document.body.style.overflow = 'unset'}, [navActive])
+
+    const navigate = useNavigate()
+    const closeNav = () => setNavActive(false)
+
+
+    function handleClickCross() {
+        navigate('/skills')
+        setOpenModal(false)
+        closeNav()
+    }
+
     const modalData = [
         {id: 1, 
             title: "eCommerce Store",
-            desc: "Powered by the Saleor eCommerce platform with an integrated Next.JS Vercel frontend app is a fully functional eCommerce storefront for your business needs. An admin panel allows for easy control of products catalagues, warehouses & shipping logistics, customer profiles, & more. Your business will be sole proprietor of all data! Plus, no compounding marketplace service fees such as on Shopify, Wix, Squarespace, etc.", 
+            desc: "Powered by the Saleor eCommerce platform with an integrated Next.JS Vercel frontend app is a fully functional eCommerce storefront for your business needs. An admin panel allows for easy control of products' catalagues, warehouses & shipping logistics, customer profiles, & more. Your business will be sole proprietor of all data! Plus, no compounding marketplace service fees such as on Shopify, Wix, Squarespace, etc.", 
             features: ["Guest checkout", "Product review system", "Personal order history", "256-bit AES encryption"],
             tools: [SiReact, SiThreedotjs, SiPython, SiDjango, SiGithub, SiVercel],
             technologies: {
@@ -36,7 +56,8 @@ function Modal({open, setOpenModal, modalID}) {
     const [currentData, setCurrentData] = useState({})
     return (
         <div key={currentData?.id} className='modal-container' style={open ? null : {display: "none"}}>
-            <ImCross id="leave-modal" onClick={() => setOpenModal(false)}/>
+            <ImCross id="leave-modal" onClick={() => handleClickCross()
+}/>
             <div className="modal-wrapper">
                 <div className="modal-video-wrapper">
                 <div className="modal-header">
@@ -88,7 +109,8 @@ function Modal({open, setOpenModal, modalID}) {
                        
                     </div>
                     <div className="modal-visit-site">
-                            <a className='modal-visit-btn' href={currentData?.url} target="_blank" rel="noreferrer">VISIT WEBSITE</a>
+                            <a className='modal-visit-btn' href={currentData?.url} target="_blank" rel="noreferrer">BUY ME <BsBoxArrowUpRight />
+                            </a>
                         </div>
                 </div>
             </div>

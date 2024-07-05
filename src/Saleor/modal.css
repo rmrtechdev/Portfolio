@@ -78,6 +78,7 @@
 }
 .iframe-wrapper {
     width: 50rem;
+    margin-top: 3rem;
 }
 .iframe-wrapper iframe {
     width: 100%;
@@ -91,6 +92,7 @@
     padding: 1rem 8rem 1.25rem;
     border-radius: .5rem;
     box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+    margin-bottom: 6rem;
 }
 .modal-tech-wrapper h1 {
     text-align: center;

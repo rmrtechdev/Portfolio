@@ -4,23 +4,9 @@ import { useNavigate } from 'react-router-dom'
 import { FaGithub, FaLinkedin } from "react-icons/fa"
 import Logo from '../Media/Images/logo.png'
 import React, { Fragment, useEffect, useState } from 'react'
-import  Storefront  from '../Saleor/Storefront'
 import Modal from '../Saleor/Modal'
 
 
-import M3jsx from '../Media/Gifs/3jsx.gif'
-import CommerceNxt from '../Media/Gifs/CommerceNxt.gif'
-import Chatroom from '../Media/Gifs/Chatroom.gif'
-
-
-import M3jsxLogo from '../Media/Images/portfolio-logos/3jsxLogo.jpg'
-import CommerceNxtLogo from '../Media/Images/portfolio-logos/CommerceNxtLogo.jpg'
-import ChatroomLogo from '../Media/Images/portfolio-logos/ChatroomLogo.jpg'
-
-
-
-
- 
 
 
 /*
@@ -45,12 +31,12 @@ function Navbar() {
 
  function handleOpenModal(id) {
         setModalID(id)
-     
+        setNavActive(true)
         setOpenModal(true)
     }
 
 
-    const [navActive, setNavActive] = useState(false)
+    const [navActive, setNavActive] = useState(true)
     useEffect(() => {navActive ?  document.body.style.overflow = 'hidden' : document.body.style.overflow = 'unset'}, [navActive])
     function handleLogoClick() {
         navigate('/contact')
