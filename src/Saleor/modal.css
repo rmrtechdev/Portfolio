@@ -1,3 +1,5 @@
+
+
 .modal-container {
     position: fixed;
     top: 0;
@@ -98,12 +100,15 @@
     color: #08fdd8;
 }
 .modal-techs {
+
     font-size: 1.65rem;
     font-weight: 300;
     line-height: 2.65rem;
     word-spacing: 2px;
     color: #ddd;
     font-style: italic;
+    justify-self: center;
+    margin-left: 1.65rem;
 }
 .modal-techs span {
     font-size: 2rem;
@@ -124,6 +129,17 @@
     animation: modalScale .65s ease-in-out .35s forwards;
     opacity: 0;
     transform: scale(.75);
+}
+
+#my-gif {
+    width: auto;
+    height: 32.5rem;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    margin-right: auto;
+
+
 }
 @keyframes modalScale {
     100% {opacity: 1; transform: scale(1)}
@@ -199,7 +215,7 @@
     width: 90%;
 }
 .modal-description {
-    font-size: 2rem;
+    font-size: 1.66rem;
     line-height: 2.75rem;
     height: 38.5%;
     margin-bottom: 1.5rem;
@@ -317,22 +333,29 @@
     }
     .modal-tech-wrapper {
         width: 40rem;
-        padding: 1.65rem 1.5rem 1.5rem;
+        padding: 12.65rem 1.5rem 1.5rem;
+        flex: content;
+
     }
     .modal-tech-wrapper h1 {
         font-size: 2rem;
         padding: .2rem 0 .8rem;
+
     }
     .modal-techs {
         font-size: 1.35rem;
         word-spacing: 0px;
     }
+
+
     .modal-techs span {
         font-size: 1.65rem;
     }
-    .modal-description {
+
+            .modal-description {
         font-size: 1.75rem;
         line-height: 2.65rem;
+        
         margin-bottom: 1rem;
     }
 }

@@ -152,9 +152,9 @@
     transition: border .5s ease-in-out;
 }
 .port-item:hover {
-    border: 2px solid # 00e6e6
-a0;
+    border: 2px solid #00e6e6;
 }
+
 .port-gif-box {
     position: relative;
     height: 33.5rem;

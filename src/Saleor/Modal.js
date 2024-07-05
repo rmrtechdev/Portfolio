@@ -3,24 +3,26 @@ import { useEffect, useState } from 'react'
 import { ImCross } from 'react-icons/im'
 import { FaGithub } from "react-icons/fa"
 import { SiReact, SiThreedotjs, SiDjango, SiPython, SiVercel, SiGithub, SiRubyonrails, SiPostgresql } from 'react-icons/si'
-
+import Saleor from '../Media/Gifs/Saleor.gif'
 
 function Modal({open, setOpenModal, modalID}) {
     useEffect(() => {open ? document.body.style.overflow = 'hidden' : document.body.style.overflow = 'unset'}, [open])
+    const [port1, setPort1] = useState(false)
     const modalData = [
         {id: 1, 
-            title: "My Simple Wardrobe.",
+            title: "eCommerce Store",
             desc: "Powered by the Saleor eCommerce platform with an integrated Next.JS Vercel frontend app is a fully functional eCommerce storefront for your business needs. An admin panel allows for easy control of products catalagues, warehouses & shipping logistics, customer profiles, & more. Your business will be sole proprietor of all data! Plus, no compounding marketplace service fees such as on Shopify, Wix, Squarespace, etc.", 
             features: ["Guest checkout", "Product review system", "Personal order history", "256-bit AES encryption"],
             tools: [SiReact, SiThreedotjs, SiPython, SiDjango, SiGithub, SiVercel],
             technologies: {
                 frontend: "Merchandising, Promotions, Operations, Checkout & Payments",
-                backend: "SEO, Future-proof U/I, Lightning-fast speeds, App Security"
+                backend: "SEO, Future-proof U/I, Lightning-fast , App Security"
             },
             link: "saleor-storefront3.vercel.app",
             url: "https://saleor-storefront3.vercel.app/default-channel",
            
-            video: "https://www.youtube.com/embed/ZwveyK1Ag60"
+            video: "https://youtu.be/di8_dJ3Clyo?si=ABSEl9cY8YSFlJDW"
+            
         }
     ]
     useEffect(() => {
@@ -37,28 +39,9 @@ function Modal({open, setOpenModal, modalID}) {
             <ImCross id="leave-modal" onClick={() => setOpenModal(false)}/>
             <div className="modal-wrapper">
                 <div className="modal-video-wrapper">
-                    <h1 className="modal-video-title">2 Minute Video Demonstration <br /><span>of</span><br /> <span>{currentData?.title}</span></h1>
-                    <div className="iframe-wrapper">
-                        <iframe 
-                            width="560" 
-                            height="315" 
-                            src={currentData?.video} 
-                            title={currentData?.title}
-                            frameBorder="0" 
-                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; fullscreen; gyroscope; picture-in-picture"
-                            allowFullScreen="allowfullscreen"
-                        ></iframe>
-                    </div>
-                    <div className="modal-tech-wrapper">
-                        <h1>Technologies Used</h1>
-                        <div className="modal-techs"><span>Saleor:&nbsp;</span>{currentData?.technologies?.frontend}</div>
-                        <div className="modal-techs"><span>Next.JS:&nbsp;</span>{currentData?.technologies?.backend}</div>
-                    </div>
-                </div>
-                <div className="modal-text-wrapper">
-                    <div className="modal-header">
+                <div className="modal-header">
                         <div className="modal-title-wrapper">
-                            <img src={currentData?.logo} alt="Logo" />
+               
                             <h1 className="modal-title">{currentData?.title}</h1>
                         </div>
                         <div className="modal-links">
@@ -72,8 +55,35 @@ function Modal({open, setOpenModal, modalID}) {
                             )}
                         </div>
                     </div>
+                    <div className="iframe-wrapper">
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/di8_dJ3Clyo?si=p10KC3Oh-dFRy6QW" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; fullscreen; gyroscope; picture-in-picture"
+                 referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                    </div>
+                    <div className="modal-tech-wrapper">
+                        <h1>Tech Tools</h1>
+                        <div className="modal-techs"><span>Saleor:&nbsp;</span>
+                        {currentData?.technologies?.frontend}
+                        </div>
+                        <div className="modal-techs"><span>Next.JS:&nbsp;</span>{currentData?.technologies?.backend}</div>
+                    </div>
+                </div>
+                <div className="modal-text-wrapper">
+                
+                
+
+                                
+                             
+                                
+                            
+                    
+
+
+                   
                     <div className="modal-body">
-                        <p className="modal-description">{currentData?.desc}</p>
+                        <p className="modal-description" >{currentData?.desc}</p>
+                        <br>
+                        </br>
+                        <img className='port-gif' id="my-gif" src={Saleor} alt="My Three.JS Demo Gif"/>
                        
                        
                     </div>
