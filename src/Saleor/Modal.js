@@ -6,7 +6,7 @@ import Saleor from '../Media/Gifs/Saleor.gif'
 import { NavLink } from 'react-router-dom'
 import { useNavigate } from 'react-router-dom'
 import { BsBoxArrowUpRight } from 'react-icons/bs'
-
+import Admin from '../Media/Images/adminlogo.jpg'
 
 
 
@@ -105,8 +105,9 @@ function Modal({open, setOpenModal, modalID}) {
                         <br>
                         </br>
                         <img className='port-gif' id="my-gif" src={Saleor} alt="My Three.JS Demo Gif"/>
-                       
-                       
+                        <br></br>
+                       <img src={Admin} alt="My Admin Panel Gif" />
+                       <br></br>
                     </div>
                     <div className="modal-visit-site">
                             <a className='modal-visit-btn' href={currentData?.url} target="_blank" rel="noreferrer">BUY ME <BsBoxArrowUpRight />
