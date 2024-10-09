@@ -10,7 +10,7 @@
     display: flex;
     align-items: center;
     justify-content:center;
-    z-index: 999;
+   
 }
 #leave-modal {
     position: absolute;
@@ -19,6 +19,7 @@
     font-size: 3rem;
     cursor: pointer;
     transition: all .25s ease;
+    
 }
 #leave-modal:hover {
     transform: rotate(-90deg);
@@ -26,7 +27,7 @@
 .modal-wrapper {
     border-radius: .5rem;
     width: 40%;
-    height: 95%;
+    height: 75%;
     margin-left: 2.5%;
     display: flex;
     align-items: center;
@@ -120,7 +121,7 @@
 .modal-text-wrapper {
     border-radius: .5rem;
     width: 40%;
-    height: 95%;
+    height: 75%;
     margin-left: 2.5%;
     display: flex;
     align-items: center;
@@ -136,7 +137,7 @@
 .container {
     border-radius: .5rem;
     width: 40%;
-    height: 95%;
+    height: 75%;
     display: flex;
     justify-content: safe;
    margin-right:2.5%;
