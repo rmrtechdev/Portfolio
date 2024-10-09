@@ -9,7 +9,7 @@
     background-color: rgba(0, 0, 0, .75);
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content:center;
     z-index: 999;
 }
 #leave-modal {
@@ -24,18 +24,19 @@
     transform: rotate(-90deg);
 }
 .modal-wrapper {
-    height: 67.5rem;
-    width: 125rem;
+    border-radius: .5rem;
+    width: 40%;
+    height: 95%;
+    margin-left: 2.5%;
     display: flex;
     align-items: center;
-    justify-content: center;
-    padding: 2rem;
-    border-radius: .75rem;
-    background-color: #222;
-    animation: modalAnim .65s ease forwards;
-    margin-right: 75rem;
+    justify-content: space-between;
+    flex-direction: column;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+    background-color: #373737;
+    animation: modalScale .65s ease-in-out .35s forwards;
     opacity: 0;
-    gap: 1.5rem;
+    transform: scale(.75);
 }
 @keyframes modalAnim {
     60% {opacity: 1}
@@ -87,9 +88,8 @@
     margin-bottom: -1rem;
 }
 .modal-tech-wrapper {
-    background-color: #373737;
+    background-color: rgba(0, 0, 0, .75);
     width: 50rem;
-    padding: 1rem 8rem 1.25rem;
     border-radius: .5rem;
     box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
     margin-bottom: 6rem;
@@ -98,7 +98,7 @@
     text-align: center;
     font-size: 2.25rem;
     font-weight: 600;
-    padding: .2rem 0 .8rem;
+
     color: #08fdd8;
 }
 .modal-techs {
@@ -119,11 +119,11 @@
 }
 .modal-text-wrapper {
     border-radius: .5rem;
-    width: 50%;
+    width: 40%;
     height: 95%;
     margin-left: 2.5%;
     display: flex;
-    align-items: flex-start;
+    align-items: center;
     justify-content: space-between;
     flex-direction: column;
     box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
@@ -133,6 +133,22 @@
     transform: scale(.75);
 }
 
+.container {
+    border-radius: .5rem;
+    width: 40%;
+    height: 95%;
+    display: flex;
+    justify-content: safe;
+   margin-right:2.5%;
+align-items: center;
+    flex-direction: column;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+    background-color: #373737;
+   
+    animation: modalScale .65s ease-in-out .35s forwards;
+    opacity: 0;
+    transform: scale(.75);
+}
 #my-gif {
     width: auto;
     height: 32.5rem;
@@ -154,7 +170,6 @@
 .modal-title-wrapper {
     display: flex;
     align-items: center;
-    justify-content: space-between;
     margin-top: 3rem;
 }
 .modal-title-wrapper img {
@@ -186,7 +201,7 @@
     transform: scale(1.125);
 }
 .modal-tools-wrapper {
-    padding: 1.25rem 0 0;
+    padding: 2rem;
     margin-bottom: -1rem;
 }
 .modal-tool {

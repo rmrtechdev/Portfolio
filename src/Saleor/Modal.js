@@ -59,37 +59,76 @@ function Modal({open, setOpenModal, modalID}) {
             <ImCross id="leave-modal" onClick={() => handleClickCross()
 }/>
             <div className="modal-wrapper">
-                <div className="modal-video-wrapper">
+
+
+
                 <div className="modal-header">
+
+
                         <div className="modal-title-wrapper">
+                            
                
                             <h1 className="modal-title">{currentData?.title}</h1>
+                            
                         </div>
+
                         <div className="modal-links">
                             <a className="modal-link1" href={currentData?.url} target="_blank" rel="noreferrer">{currentData?.link}</a>
                             
-                            <a className="modal-link2" href={currentData?.github} target="_blank" rel="noreferrer"></a>
+    
                         </div>
+                        
+
                         <div className="modal-tools-wrapper">
                             {currentData?.tools?.map(Tool => 
                                 <Tool className="modal-tool"/>
                             )}
                         </div>
-                    </div>
-                    <div className="iframe-wrapper">
-                    <iframe width="560" height="315" src="https://www.youtube.com/embed/di8_dJ3Clyo?si=p10KC3Oh-dFRy6QW" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; fullscreen; gyroscope; picture-in-picture"
-                 referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-                    </div>
-                    <div className="modal-tech-wrapper">
+
+                        </div>
+
+
+
+                        
+                        <div className="modal-video-wrapper">
+
+<div className="iframe-wrapper">
+<iframe width="560" height="315" src="https://www.youtube.com/embed/di8_dJ3Clyo?si=p10KC3Oh-dFRy6QW" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; fullscreen; gyroscope; picture-in-picture"
+referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+       </div>
+<br></br>
+<br></br>
+<div className="modal-tech-wrapper">
                         <h1>Tech Tools</h1>
+                      
                         <div className="modal-techs"><span>Saleor:&nbsp;</span>
                         {currentData?.technologies?.frontend}
                         </div>
                         <div className="modal-techs"><span>Next.JS:&nbsp;</span>{currentData?.technologies?.backend}</div>
                     </div>
-                </div>
-                <div className="modal-text-wrapper">
+</div>
+
+             
+
+
+
+                  
+
+
+                   
+       
+
+                   
+                    </div>
+
                 
+  
+
+          
+
+
+
+                <div className="modal-text-wrapper">
                 
 
                                 
@@ -113,8 +152,9 @@ function Modal({open, setOpenModal, modalID}) {
                             <a className='modal-visit-btn' href={currentData?.url} target="_blank" rel="noreferrer">BUY ME <BsBoxArrowUpRight />
                             </a>
                         </div>
-                </div>
-            </div>
+                        </div>
+
+         
         </div>
     )
 }
