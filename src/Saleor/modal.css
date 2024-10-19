@@ -10,6 +10,17 @@
     justify-content: center;
     z-index: 999;
 }
+
+#my-gif {
+    width: auto;
+    height: 32.5rem;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    margin-right: auto;
+}
+
+
 #leave-modal {
     position: absolute;
     top: 5rem;
@@ -68,7 +79,7 @@
 .modal-video-title span:last-of-type {
     font-size: 3rem;
     font-weight: 600;
-    color: #08fdd8;
+    color: #FF69B4;
 }
 #modal-trade {
     display: inline-block;
@@ -197,6 +208,9 @@
     flex-direction: column;
     margin-top: 2.5rem;
     width: 90%;
+    overflow-y: scroll;
+    overflow-x: hidden;
+
 }
 .modal-description {
     font-size: 2rem;

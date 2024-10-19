@@ -94,15 +94,23 @@ function Modal({ open, setOpenModal, modalID }) {
                         </div>
                     </div>
                     <div className="modal-body">
-                        <p className="modal-description">{currentData?.desc}</p>                        <ul className="modal-features">
+                        <p className="modal-description">{currentData?.desc}</p>                            <br></br>                             <div> <br></br></div>
+                        <br>
+                        </br>
+                        <img className='port-gif' id="my-gif" src={Saleor} alt="My Three.JS Demo Gif"/>
+                        <br></br>
+                       <img src={Admin} alt="My Admin Panel Gif" />
+                       <br></br>
+                                   <ul className="modal-features">
                             {currentData?.features?.map(feature => (
                                 <li className="modal-feature">{feature}</li>
                             ))}
                         </ul>
-                        <div className="modal-visit-site">
+                        
+                    </div>
+                    <div className="modal-visit-site">
                             <a className='modal-visit-btn' href={currentData?.url} target="_blank" rel="noreferrer">BUY ME</a>
                         </div>
-                    </div>
                 </div>
             </div>
         </div>
