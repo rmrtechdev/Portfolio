@@ -270,7 +270,7 @@ function Work() {
                         
 
                         <div className="port-text-box">
-                            <h1 className="port-title"> Django &nbsp; <em> Local A.I.</em> AssistaBot </h1>
+                            <h1 className="port-title"> Django &nbsp; <em> Local A.I.</em> &nbsp;AssistaBot </h1>
                             
                             <p className="port-headline">LLM 'Tool Calling' enables AI models to execute function methods from Django's side ~ essentially anything a Django view can do such as: DB queries, file management, external API calls, etc.</p>
 
