@@ -35,8 +35,8 @@ function Modal({ open, setOpenModal, modalID }) {
         
         {
             id: 1,
-            title: "eCommerce Store",
-            desc: "Powered by the Saleor eCommerce platform with an integrated Next.JS Vercel frontend app is a fully functional eCommerce storefront for your business needs. An admin panel allows for easy control of products' catalagues, warehouses & shipping logistics, customer profiles, & more. Your business will be sole proprietor of all data! Plus, no compounding marketplace service fees such as on Shopify, Wix, Squarespace, etc.",
+            title: "Saleor eCommerce Store",
+            desc: "Powered by the Saleor eCommerce platform with an integrated Next.JS Vercel frontend app is a fully functional eCommerce storefront for your business needs. An admin panel allows for easy control of product catalagues, warehouses & shipping logistics, customer profiles, & more. Your business will be sole proprietor of all data! Plus, no compounding marketplace service fees such as on Shopify, Wix, Squarespace, etc.",
 
             features: [],
             tools: [SiReact, SiThreedotjs, SiPython, SiDjango, SiVercel],
@@ -97,9 +97,12 @@ function Modal({ open, setOpenModal, modalID }) {
                         <p className="modal-description">{currentData?.desc}</p>                            <br></br>                             <div> <br></br></div>
                         <br>
                         </br>
+                        <div className='container' />
+                        <div>
                         <img className='port-gif' id="my-gif" src={Saleor} alt="My Three.JS Demo Gif"/>
                         <br></br>
                        <img src={Admin} alt="My Admin Panel Gif" />
+                       </div>
                        <br></br>
                                    <ul className="modal-features">
                             {currentData?.features?.map(feature => (

@@ -221,6 +221,7 @@ export default function MyGlobe() {
           <span>orbit.&nbsp;</span>
         </p>
       </div>
+          
 
       <EncomGlobe
         width={state.width}
@@ -237,6 +238,11 @@ export default function MyGlobe() {
           dayLength: 2100 * 26,
         }}
       />
-    </div>
+
+
+</div>
+
+    
+    
   );
 }

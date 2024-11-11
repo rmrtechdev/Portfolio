@@ -10,6 +10,9 @@ import { useInView } from 'react-intersection-observer'
 
 
 
+import Saleor from'../Media/Gifs/Saleor.gif'
+import SaleorLogo from '../Media/Images/portfolio-logos/SaleorLogo.jpg'
+
 // Main Logos
 
 import M3jsx from '../Media/Gifs/3jsx.gif'
@@ -114,6 +117,45 @@ function Work() {
                     <div className="port-item" id='portItem2' onMouseEnter={() => setPort2(true)} onMouseLeave={() => setPort2(false)}>
                         <div className="port-gif-box">
                             <div className="port-gif-wrapper">
+                                <img className='port-gif' src={Saleor} alt="Grocery Magix Gif" style={port2 ? {opacity: "1"} : {opacity: "0"}}/>
+                                <img className='port-gif port-gif-logo' src={ SaleorLogo  } alt="Grocery Magix Logo" style={port2 ? {opacity: "0"} : {opacity: "1"}}/>
+                            </div>
+                            <a href='https://nextjs-commerce-two-omega.vercel.app' target="_blank" rel="noreferrer">
+                                <div className="portGifPopup">
+                                    <p>Go to site</p>
+                                    <BsBoxArrowUpRight id='goToSitePort'/>
+                                </div>
+                            </a>
+                        </div>
+
+                        <div className="port-text-box">
+                            <h1 className="port-title"> Saleor Full-Stack Commerce  </h1>
+                           
+                            <p className="port-headline"> Privatize and safeguard proprietary business data with Saleor's eCommerce evolution engine. |operational logistics| |warehouses| |customers| 
+                            |checkout payments| |gift-cards| |promotions| |B2B| |D2C|
+                             |product catalagues| |permissions| |taxes| |order processing| |stocked availability| |market channels| |internationalization|
+ </p>
+                            <div className="port-btn-box">
+
+                                <div className="modal-tech-wrapper">
+                                    <h1>Technologies Used</h1>
+                                    <div className="modal-techs">
+                                        Saleor, Next.JS, React.JS, Three.JS, Docker, Linux, TailwindCSS, GraphQL
+
+                                    </div>
+                                </div>
+                            </div>
+                            
+                        </div>
+                    </div>
+
+
+
+
+
+                    <div className="port-item" id='portItem2' onMouseEnter={() => setPort2(true)} onMouseLeave={() => setPort2(false)}>
+                        <div className="port-gif-box">
+                            <div className="port-gif-wrapper">
                                 <img className='port-gif' src={CommerceNxt} alt="Grocery Magix Gif" style={port2 ? {opacity: "1"} : {opacity: "0"}}/>
                                 <img className='port-gif port-gif-logo' src={CommerceNxtLogo} alt="Grocery Magix Logo" style={port2 ? {opacity: "0"} : {opacity: "1"}}/>
                             </div>
@@ -157,9 +199,10 @@ function Work() {
                                 </div>
                             </a>
                         </div>
+
                         <div className="port-text-box">
                             <h1 className="port-title"> Django Chatroom Server</h1>
-                            <a className="port-title-site" href='http://django.rmrtech.tech' target="_blank" rel="noreferrer">www.django.rmrtech.tech</a>
+                           
                             <p className="port-headline">A user-authenticated, asynchronous public chat server built on Django Channels to handle bilateral web socket communications.  </p>
                             <div className="port-btn-box">
 
@@ -185,7 +228,65 @@ function Work() {
                        
                 </div>
 
+
+
+
+
+
                 <div className="other-separator" ref={otherSepRef} id={otherSepInView ? "education-separator-active" : undefined}></div>
+
+
+
+
+                <div className="port-contribute">
+
+                   <div className='contr-span' onClick={() => navigate('/contact')}>Open Source Contributions:</div>
+                    <br/>
+                   <div className="port-item" id='portItem3' onMouseEnter={() => setPort3(true)} onMouseLeave={() => setPort3(false)}>
+                        <div className="port-gif-box">
+                            <div className="port-gif-wrapper">
+                                <img className='port-gif' src={Chatroom} alt="The Financial Tracker Gif" style={port3 ? {opacity: "1"} : {opacity: "0"}}/>
+                                <img className='port-gif port-gif-logo' src={ChatroomLogo} alt="The Financial Tracker Logo" style={port3 ? {opacity: "0"} : {opacity: "1"}}/>
+                            </div>
+                            <a href='http://www.django.rmrtech.tech' target="_blank" rel="noreferrer">
+                                <div className="portGifPopup">
+                                    <p>Go to site</p>
+                                    <BsBoxArrowUpRight id='goToSitePort'/>
+                                </div>
+                            </a>
+                        </div>
+
+                        <div className="port-text-box">
+                            <h1 className="port-title"> Django Chatroom Server</h1>
+                            
+                            <p className="port-headline">A user-authenticated, asynchronous public chat server built on Django Channels to handle bilateral web socket communications.  </p>
+                            <div className="port-btn-box">
+
+                                <div className="modal-tech-wrapper">
+                                    <h1>Technologies Used</h1>
+                                    <div className="modal-techs"><span>Frontend:&nbsp;</span> 
+                                    HTML, Javascript, Tailwind-CSS
+                                    </div>
+                                    <div className="modal-techs"><span>Backend:&nbsp;</span> 
+                                    Django Channels, Nginx, Gunicorn
+                                    </div>
+                                </div>
+                            </div>
+                            
+                                   
+                                
+                     
+                        </div>
+                    </div>
+
+
+
+                </div>
+
+
+
+                <div className="other-separator" ref={otherSepRef} id={otherSepInView ? "education-separator-active" : undefined}></div>
+
 
                 <div className="algo-wrapper">
 
