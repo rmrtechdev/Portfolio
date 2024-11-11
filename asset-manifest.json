@@ -1,12 +1,14 @@
 {
   "files": {
-    "main.css": "/portfolio/static/css/main.5677e907.css",
-    "main.js": "/portfolio/static/js/main.a575380c.js",
+    "main.css": "/portfolio/static/css/main.2f615193.css",
+    "main.js": "/portfolio/static/js/main.933fa5c6.js",
     "static/media/3jsx.gif": "/portfolio/static/media/3jsx.c8ecb776b604aa48f5ec.gif",
     "static/media/CommerceNxt.gif": "/portfolio/static/media/CommerceNxt.a30c1da1ea75ab6e78b2.gif",
     "static/media/Saleor.gif": "/portfolio/static/media/Saleor.617b8e8fd2acc4b3b4fe.gif",
     "static/media/Chatroom.gif": "/portfolio/static/media/Chatroom.6773c6543cbb63f0c99d.gif",
+    "static/media/neural.gif": "/portfolio/static/media/neural.30b0f127ce3cc7e3d6f2.gif",
     "static/media/tryhackme.png": "/portfolio/static/media/tryhackme.d66c7e17a036c5be2198.png",
+    "static/media/SaleorLogo.jpg": "/portfolio/static/media/SaleorLogo.8c7b034e1fdb18e7195a.jpg",
     "static/media/3jsxLogo.jpg": "/portfolio/static/media/3jsxLogo.9b109d027f8d3b21bab2.jpg",
     "static/media/adminlogo.jpg": "/portfolio/static/media/adminlogo.fa16e5d07ec7fbf58548.jpg",
     "static/media/CommerceNxtLogo.jpg": "/portfolio/static/media/CommerceNxtLogo.8672cc0b3cafe24fb56a.jpg",
@@ -14,6 +16,7 @@
     "static/media/css.png": "/portfolio/static/media/css.a1681b650b44c4bf83fa.png",
     "static/media/sql.png": "/portfolio/static/media/sql.c65fa0ac071f1ab7e7ec.png",
     "static/media/linux-logo.png": "/portfolio/static/media/linux-logo.0ae69d2eae7e39bfe725.png",
+    "static/media/neural.jpg": "/portfolio/static/media/neural.3fc4de2e77b6eff8a9f1.jpg",
     "static/media/medium-clap.png": "/portfolio/static/media/medium-clap.1ae0996a052cb26f21ee.png",
     "static/media/crapi.png": "/portfolio/static/media/crapi.110742c615ec8837e19c.png",
     "static/media/hackthebox.png": "/portfolio/static/media/hackthebox.17ff8c03a1f3354a16c5.png",
@@ -27,11 +30,11 @@
     "static/media/react.png": "/portfolio/static/media/react.386dce8c87dd89b9617b.png",
     "static/media/restful-api.png": "/portfolio/static/media/restful-api.5c29c4fc5673b5b04809.png",
     "index.html": "/portfolio/index.html",
-    "main.5677e907.css.map": "/portfolio/static/css/main.5677e907.css.map",
-    "main.a575380c.js.map": "/portfolio/static/js/main.a575380c.js.map"
+    "main.2f615193.css.map": "/portfolio/static/css/main.2f615193.css.map",
+    "main.933fa5c6.js.map": "/portfolio/static/js/main.933fa5c6.js.map"
   },
   "entrypoints": [
-    "static/css/main.5677e907.css",
-    "static/js/main.a575380c.js"
+    "static/css/main.2f615193.css",
+    "static/js/main.933fa5c6.js"
   ]
 }
