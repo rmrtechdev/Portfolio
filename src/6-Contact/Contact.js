@@ -32,7 +32,7 @@ export default function Contact() {
         let clearPopup = setTimeout(() => setCopied(false), 1500)
         copied && clearTimeout(clearPopup)
         setCopied(true)
-        navigator.clipboard.writeText("raymond@rmrtech.tech")
+        navigator.clipboard.writeText("raymondmichael92@gmail.com")
     }
 
     return (
@@ -83,7 +83,7 @@ export default function Contact() {
                 <div className="contact-aside contactForm7">
                     <p id='contact-copy-top'>Or email me directly at:</p>
                     <div className="contact-copy-wrap">
-                        <div className='contact-copy-box'><VscCopy onClick={() => handleCopy()} id='contact-copy-icon'/><p id='contact-copy-email'>raymond@rmrtech.tech</p></div>
+                        <div className='contact-copy-box'><VscCopy onClick={() => handleCopy()} id='contact-copy-icon'/><p id='contact-copy-email'>raymondmichael92@gmail.com</p></div>
                         <div className='contact-popup' id={copied ? "contact-popup-show" : undefined}>Copied!</div>
                     </div>
                 </div>
@@ -92,7 +92,7 @@ export default function Contact() {
             <div className="contact-right-cover"></div>
                 <div className="map-popup">
                     <p>Raymond M. Roman</p>
-                    <p>raymond@rmrtech.tech</p>
+                    <p>raymondmichael92@gmail.com</p>
                    
                     <p>New York, New York</p>
                 </div>

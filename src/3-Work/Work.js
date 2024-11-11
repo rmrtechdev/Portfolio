@@ -7,7 +7,7 @@ import { useEffect, useState } from 'react'
 import { useNavigate } from 'react-router-dom'
 import { BsBoxArrowUpRight } from 'react-icons/bs'
 import { useInView } from 'react-intersection-observer'
-
+import LazyLoad from 'react-lazyload'
 
 
 import Saleor from'../Media/Gifs/Saleor.gif'
@@ -86,7 +86,10 @@ function Work() {
 
                                 
                                 <img className='port-gif' src={M3jsx} style={port1 ? {opacity: "1"} : {opacity: "0"}}/>
+
+                                <LazyLoad>
                                 <img className='port-gif port-gif-logo' src={M3jsxLogo} drobe  style={port1 ? {opacity: "0"} : {opacity: "1"}}/>
+                                </LazyLoad>
                             </div>
 
                             <a href='http://heikojan2010.github.io/jsx3/' target="_blank" rel="noreferrer">
@@ -119,11 +122,13 @@ function Work() {
 
 
 
-                    <div className="port-item" id='portItem4' onMouseEnter={() => setPort4(true)} onMouseLeave={() => setPort4(false)}>
+                    <div className="port-item" id='portItem2' onMouseEnter={() => setPort2(true)} onMouseLeave={() => setPort2(false)}>
                         <div className="port-gif-box">
                             <div className="port-gif-wrapper">
-                                <img className='port-gif' src={Saleor}   style={port4 ? {opacity: "1"} : {opacity: "0"}}/>
-                                <img className='port-gif port-gif-logo' src={ SaleorLogo  }   style={port4 ? {opacity: "0"} : {opacity: "1"}}/>
+                                <img className='port-gif' src={Saleor}   style={port2 ? {opacity: "1"} : {opacity: "0"}}/>
+                                <LazyLoad>
+                                <img className='port-gif port-gif-logo' src={ SaleorLogo  }   style={port2 ? {opacity: "0"} : {opacity: "1"}}/>
+                                </LazyLoad>
                             </div>
                             <a href='https://nextjs-commerce-two-omega.vercel.app' target="_blank" rel="noreferrer">
                                 <div className="portGifPopup">
@@ -158,11 +163,13 @@ function Work() {
 
 
 
-                    <div className="port-item" id='portItem2' onMouseEnter={() => setPort2(true)} onMouseLeave={() => setPort2(false)}>
+                    <div className="port-item" id='portItem3' onMouseEnter={() => setPort3(true)} onMouseLeave={() => setPort3(false)}>
                         <div className="port-gif-box">
                             <div className="port-gif-wrapper">
-                                <img className='port-gif' src={CommerceNxt} style={port2 ? {opacity: "1"} : {opacity: "0"}}/>
-                                <img className='port-gif port-gif-logo' src={CommerceNxtLogo}  style={port2 ? {opacity: "0"} : {opacity: "1"}}/>
+                                <LazyLoad>
+                                <img className='port-gif' src={CommerceNxt} style={port3 ? {opacity: "1"} : {opacity: "0"}}/>
+                                <img className='port-gif port-gif-logo' src={CommerceNxtLogo}  style={port3 ? {opacity: "0"} : {opacity: "1"}}/>
+                                </LazyLoad>
                             </div>
                             <a href='https://nextjs-commerce-two-omega.vercel.app' target="_blank" rel="noreferrer">
                                 <div className="portGifPopup">
@@ -191,11 +198,13 @@ function Work() {
                     </div>
 
 
-                    <div className="port-item" id='portItem3' onMouseEnter={() => setPort3(true)} onMouseLeave={() => setPort3(false)}>
+                    <div className="port-item" id='portItem4' onMouseEnter={() => setPort4(true)} onMouseLeave={() => setPort4(false)}>
                         <div className="port-gif-box">
                             <div className="port-gif-wrapper">
-                                <img className='port-gif' src={Chatroom}  Tracker style={port3 ? {opacity: "1"} : {opacity: "0"}}/>
-                                <img className='port-gif port-gif-logo' src={ChatroomLogo}  Tracker style={port3 ? {opacity: "0"} : {opacity: "1"}}/>
+                                <LazyLoad>
+                                <img className='port-gif' src={Chatroom}  Tracker style={port4 ? {opacity: "1"} : {opacity: "0"}}/>
+                                <img className='port-gif port-gif-logo' src={ChatroomLogo}  Tracker style={port4 ? {opacity: "0"} : {opacity: "1"}}/>
+                                </LazyLoad>
                             </div>
                             <a href='http://www.django.rmrtech.tech' target="_blank" rel="noreferrer">
                                 <div className="portGifPopup">
@@ -249,11 +258,13 @@ function Work() {
                     <br/>
                    
                    
-                   <div className="port-item" id='portItem3' onMouseEnter={() => setPort5(true)} onMouseLeave={() => setPort5(false)}>
+                   <div className="port-item" id='portItem5' onMouseEnter={() => setPort5(true)} onMouseLeave={() => setPort5(false)}>
                         <div className="port-gif-box">
                             <div className="port-gif-wrapper">
+                                <LazyLoad>
                                 <img className='port-gif' src={Hologram}  style={port5 ? {opacity: "1"} : {opacity: "0"}}/>
                                 <img className='port-gif port-gif-logo' src={HologramLogo} style={port5 ? {opacity: "0"} : {opacity: "1"}}/>
+                                </LazyLoad>
                             </div>
                             <a href='http://www.django.rmrtech.tech' target="_blank" rel="noreferrer">
                                 <div className="portGifPopup">

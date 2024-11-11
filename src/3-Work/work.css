@@ -70,26 +70,27 @@
 
 
 
-.port-contribute {
-    display: flex;
-    align-items: center;
-    justify-content: flex-start;
-    flex-direction: column;
-    width: 100%;
-}
-.port-contribute span:nth-child(1) {animation: descFadeIn 0.8s 2.3s forwards cubic-bezier(0.11, 0, 0.5, 0); color: whitesmoke;  cursor: pointer;  
+.port-contribute  {
+    display: grid;
+    grid-template-rows: auto auto auto auto;
+    grid-template-columns: auto;
+    width: 90%;
+    margin-top: 3.85rem;
+    gap: 3rem;
+    animation: portFade 3s ease forwards;
+    opacity: 0;
 }
 
 .contr-span {
-    position: relative;
+display:flex;
+justify-content: center;
     color: white;
-    font-size: 5.25rem;
-    font-weight: 450;
+    font-size: 6.25rem;
+    font-weight: 600;
     animation: skilsHeadFade 2s ease forwards;
     margin-top: 4.5rem;
     margin-bottom: -3.5rem;
     opacity: 0;
-    margin-bottom: 3rem;
 }
 
 
@@ -219,6 +220,10 @@
 #portItem4 .port-gif-box {animation: portAnimBox 1s ease 2.5s forwards}
 #portItem4 .port-gif-wrapper {animation: portAnimWrap 1s ease 2.5s forwards}
 #portItem4 .portGifPopup {animation: portAnimPop 1s ease 4.5s forwards}
+#portItem5 {animation: portAnimItem 1s ease 2.5s forwards}
+#portItem5 .port-gif-box {animation: portAnimBox 1s ease 2.5s forwards}
+#portItem5 .port-gif-wrapper {animation: portAnimWrap 1s ease 2.5s forwards}
+#portItem5 .portGifPopup {animation: portAnimPop 1s ease 4.5s forwards}
 
 @keyframes portAnimItem {
     60% {transform: scale(.9)}
