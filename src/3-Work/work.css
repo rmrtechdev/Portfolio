@@ -163,6 +163,7 @@ justify-content: center;
     animation: portFade 3s ease forwards;
     opacity: 0;
 }
+
 .port-item {
     display: flex;
     align-items: center;
@@ -280,6 +281,7 @@ justify-content: center;
 .port-title {
     font-size: 4rem;
     font-weight: 400;
+    display: flex;
 }
 
 .port-title-site {
@@ -289,6 +291,12 @@ justify-content: center;
 }
 .port-title-site:hover {
     color: #FF69B4;
+}
+.port-btn-box {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    width: 100%;
 }
 .modal-tech-wrapper {
     background-color: #373737;
