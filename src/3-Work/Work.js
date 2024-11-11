@@ -13,6 +13,8 @@ import { useInView } from 'react-intersection-observer'
 import Saleor from'../Media/Gifs/Saleor.gif'
 import SaleorLogo from '../Media/Images/portfolio-logos/SaleorLogo.jpg'
 
+import Hologram from '../Media/Gifs/neural.gif'
+import HologramLogo from '../Media/Images/neural.jpg'
 // Main Logos
 
 import M3jsx from '../Media/Gifs/3jsx.gif'
@@ -32,6 +34,9 @@ function Work() {
     const [port1, setPort1] = useState(false)
     const [port2, setPort2] = useState(false)
     const [port3, setPort3] = useState(false)
+    const [port4, setPort4] = useState(false)
+    const [port5, setPort5] = useState(false)
+    
     
    
 
@@ -80,8 +85,8 @@ function Work() {
                             <div className="port-gif-wrapper">
 
                                 
-                                <img className='port-gif' src={M3jsx} alt="My Three.JS Demo Gif" style={port1 ? {opacity: "1"} : {opacity: "0"}}/>
-                                <img className='port-gif port-gif-logo' src={M3jsxLogo} alt="My Simple Wardrobe Logo" style={port1 ? {opacity: "0"} : {opacity: "1"}}/>
+                                <img className='port-gif' src={M3jsx} style={port1 ? {opacity: "1"} : {opacity: "0"}}/>
+                                <img className='port-gif port-gif-logo' src={M3jsxLogo} drobe  style={port1 ? {opacity: "0"} : {opacity: "1"}}/>
                             </div>
 
                             <a href='http://heikojan2010.github.io/jsx3/' target="_blank" rel="noreferrer">
@@ -114,11 +119,11 @@ function Work() {
 
 
 
-                    <div className="port-item" id='portItem2' onMouseEnter={() => setPort2(true)} onMouseLeave={() => setPort2(false)}>
+                    <div className="port-item" id='portItem4' onMouseEnter={() => setPort4(true)} onMouseLeave={() => setPort4(false)}>
                         <div className="port-gif-box">
                             <div className="port-gif-wrapper">
-                                <img className='port-gif' src={Saleor} alt="Grocery Magix Gif" style={port2 ? {opacity: "1"} : {opacity: "0"}}/>
-                                <img className='port-gif port-gif-logo' src={ SaleorLogo  } alt="Grocery Magix Logo" style={port2 ? {opacity: "0"} : {opacity: "1"}}/>
+                                <img className='port-gif' src={Saleor}   style={port4 ? {opacity: "1"} : {opacity: "0"}}/>
+                                <img className='port-gif port-gif-logo' src={ SaleorLogo  }   style={port4 ? {opacity: "0"} : {opacity: "1"}}/>
                             </div>
                             <a href='https://nextjs-commerce-two-omega.vercel.app' target="_blank" rel="noreferrer">
                                 <div className="portGifPopup">
@@ -140,7 +145,7 @@ function Work() {
                                 <div className="modal-tech-wrapper">
                                     <h1>Technologies Used</h1>
                                     <div className="modal-techs">
-                                        Saleor, Next.JS, React.JS, Three.JS, Docker, Linux, TailwindCSS, GraphQL
+                                        Saleor, Next.JS, React.JS, Three.JS, Docker, Linux, Tailwind-CSS, GraphQL
 
                                     </div>
                                 </div>
@@ -156,8 +161,8 @@ function Work() {
                     <div className="port-item" id='portItem2' onMouseEnter={() => setPort2(true)} onMouseLeave={() => setPort2(false)}>
                         <div className="port-gif-box">
                             <div className="port-gif-wrapper">
-                                <img className='port-gif' src={CommerceNxt} alt="Grocery Magix Gif" style={port2 ? {opacity: "1"} : {opacity: "0"}}/>
-                                <img className='port-gif port-gif-logo' src={CommerceNxtLogo} alt="Grocery Magix Logo" style={port2 ? {opacity: "0"} : {opacity: "1"}}/>
+                                <img className='port-gif' src={CommerceNxt} style={port2 ? {opacity: "1"} : {opacity: "0"}}/>
+                                <img className='port-gif port-gif-logo' src={CommerceNxtLogo}  style={port2 ? {opacity: "0"} : {opacity: "1"}}/>
                             </div>
                             <a href='https://nextjs-commerce-two-omega.vercel.app' target="_blank" rel="noreferrer">
                                 <div className="portGifPopup">
@@ -189,8 +194,8 @@ function Work() {
                     <div className="port-item" id='portItem3' onMouseEnter={() => setPort3(true)} onMouseLeave={() => setPort3(false)}>
                         <div className="port-gif-box">
                             <div className="port-gif-wrapper">
-                                <img className='port-gif' src={Chatroom} alt="The Financial Tracker Gif" style={port3 ? {opacity: "1"} : {opacity: "0"}}/>
-                                <img className='port-gif port-gif-logo' src={ChatroomLogo} alt="The Financial Tracker Logo" style={port3 ? {opacity: "0"} : {opacity: "1"}}/>
+                                <img className='port-gif' src={Chatroom}  Tracker style={port3 ? {opacity: "1"} : {opacity: "0"}}/>
+                                <img className='port-gif port-gif-logo' src={ChatroomLogo}  Tracker style={port3 ? {opacity: "0"} : {opacity: "1"}}/>
                             </div>
                             <a href='http://www.django.rmrtech.tech' target="_blank" rel="noreferrer">
                                 <div className="portGifPopup">
@@ -209,7 +214,7 @@ function Work() {
                                 <div className="modal-tech-wrapper">
                                     <h1>Technologies Used</h1>
                                     <div className="modal-techs"><span>Frontend:&nbsp;</span> 
-                                    HTML, Javascript, Tailwind-CSS
+                                   Three.JS, HTML, Tailwind-CSS
                                     </div>
                                     <div className="modal-techs"><span>Backend:&nbsp;</span> 
                                     Django Channels, Nginx, Gunicorn
@@ -242,11 +247,13 @@ function Work() {
 
                    <div className='contr-span' onClick={() => navigate('/contact')}>Open Source Contributions:</div>
                     <br/>
-                   <div className="port-item" id='portItem3' onMouseEnter={() => setPort3(true)} onMouseLeave={() => setPort3(false)}>
+                   
+                   
+                   <div className="port-item" id='portItem3' onMouseEnter={() => setPort5(true)} onMouseLeave={() => setPort5(false)}>
                         <div className="port-gif-box">
                             <div className="port-gif-wrapper">
-                                <img className='port-gif' src={Chatroom} alt="The Financial Tracker Gif" style={port3 ? {opacity: "1"} : {opacity: "0"}}/>
-                                <img className='port-gif port-gif-logo' src={ChatroomLogo} alt="The Financial Tracker Logo" style={port3 ? {opacity: "0"} : {opacity: "1"}}/>
+                                <img className='port-gif' src={Hologram}  style={port5 ? {opacity: "1"} : {opacity: "0"}}/>
+                                <img className='port-gif port-gif-logo' src={HologramLogo} style={port5 ? {opacity: "0"} : {opacity: "1"}}/>
                             </div>
                             <a href='http://www.django.rmrtech.tech' target="_blank" rel="noreferrer">
                                 <div className="portGifPopup">
@@ -256,19 +263,21 @@ function Work() {
                             </a>
                         </div>
 
+                        
+
                         <div className="port-text-box">
-                            <h1 className="port-title"> Django Chatroom Server</h1>
+                            <h1 className="port-title"> Django A.I. AssistaBot </h1>
                             
-                            <p className="port-headline">A user-authenticated, asynchronous public chat server built on Django Channels to handle bilateral web socket communications.  </p>
+                            <p className="port-headline">LLM 'Tool Calling' enables AI models to execute function methods from Django's side ~ essentially anything a Django view can do such as: DB queries, file management, external API calls, etc.</p>
                             <div className="port-btn-box">
 
                                 <div className="modal-tech-wrapper">
                                     <h1>Technologies Used</h1>
                                     <div className="modal-techs"><span>Frontend:&nbsp;</span> 
-                                    HTML, Javascript, Tailwind-CSS
+                                    Three.JS, React.JS, Mantine.JS
                                     </div>
                                     <div className="modal-techs"><span>Backend:&nbsp;</span> 
-                                    Django Channels, Nginx, Gunicorn
+                                    Django, Ollama, LLama3.2
                                     </div>
                                 </div>
                             </div>
