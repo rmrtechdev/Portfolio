@@ -7,7 +7,7 @@ import Work from './3-Work/Work'
 import Blogs from './5-Blogs/Blogs'
 import Contact from './6-Contact/Contact'
 import MyGlobe from './GlobeEncom/MyGlobe'
-import  Modal  from './Saleor/Modal'
+import AnimatedModalDemo from './Saleor/DemoModal'
 
 
 function App() {
@@ -21,7 +21,7 @@ function App() {
        
         <Route exact path="/work" element={<Work/>} />
 
-        <Route exact path="/saleor" element={<Modal/>} />
+        <Route exact path="/saleor" element={<AnimatedModalDemo/>} />
 
         <Route exact path='security' element={<Blogs /> } />
         

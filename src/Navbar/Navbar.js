@@ -4,9 +4,7 @@ import { useNavigate } from 'react-router-dom'
 import { FaGithub, FaLinkedin } from "react-icons/fa"
 import Logo from '../Media/Images/logo.png'
 import React, { Fragment, useEffect, useState } from 'react'
-import Modal from '../Saleor/Modal'
-
-
+import AnimatedModalDemo from '../Saleor/DemoModal'
 
 
 /*
@@ -49,7 +47,7 @@ function Navbar() {
         
         <Fragment>
             <div>
-            <Modal open={openModal} setOpenModal={setOpenModal} modalID={modalID} />
+            <AnimatedModalDemo open={openModal} setOpenModal={setOpenModal} modalID={modalID} />
 
             </div>
                     
