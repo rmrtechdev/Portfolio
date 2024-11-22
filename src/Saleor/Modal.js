@@ -62,61 +62,64 @@ function Modal({ open, setOpenModal, modalID }) {
     }, [modalID, open])
     const [currentData, setCurrentData] = useState({})
     return (
-        <div key={currentData?.id} className='modal-container' style={open ? null : {display: "none"}}>
-            <ImCross id="leave-modal" onClick={() => setOpenModal(false)}/>
-            <div className="modal-wrapper">
-                <div className="modal-video-wrapper">
-                    <h1 className="modal-video-title"> <span>{currentData?.title}</span></h1>
-                    <div className="modal-links">
-                            <a className="modal-link1" href={currentData?.url} target="_blank" rel="noreferrer">{currentData?.link}</a>
-                           
-                        </div>
-                    <div className="iframe-wrapper">
-                    <iframe width="560" height="315" src="https://www.youtube.com/embed/di8_dJ3Clyo?si=p10KC3Oh-dFRy6QW" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; fullscreen; gyroscope; picture-in-picture"
-                 referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-                    </div>
-                    <div className="modal-tech-wrapper">
-                        <h1>Technologies Used</h1>
-                        <div className="modal-techs"><span>Frontend:&nbsp;</span>{currentData?.technologies?.frontend}</div>
-                        <div className="modal-techs"><span>Backend:&nbsp;</span>{currentData?.technologies?.backend}</div>
-                    </div>
+        <div key={currentData?.id} className="modal-container" style={open ? null : { display: "none" }}>
+        <ImCross id="leave-modal" onClick={() => setOpenModal(false)} />
+        <div className="modal-wrapper">
+            <div className="modal-video-wrapper">
+                <h1 className="modal-video-title"> <span>{currentData?.title}</span></h1>
+                <div className="modal-links">
+                    <a className="modal-link1" href={currentData?.url} target="_blank" rel="noreferrer">{currentData?.link}</a>
                 </div>
-                <div className="modal-text-wrapper">
-                    <div className="modal-header">
-                        <div className="modal-title-wrapper">
-                            <h1 className="modal-title">{currentData?.title}</h1>
-                        </div>
-                       
-                        <div className="modal-tools-wrapper">
-                            {currentData?.tools?.map(Tool => 
-                                <Tool className="modal-tool"/>
-                            )}
-                        </div>
-                    </div>
-                    <div className="modal-body">
-                        <p className="modal-description">{currentData?.desc}</p>                            <br></br>                             <div> <br></br></div>
-                        <br>
-                        </br>
-                        <div className='container' />
-                        <div>
-                        <img className='port-gif' id="my-gif" src={Saleor} alt="My Three.JS Demo Gif"/>
-                        <br></br>
-                       <img src={Admin} alt="My Admin Panel Gif" />
-                       </div>
-                       <br></br>
-                                   <ul className="modal-features">
-                            {currentData?.features?.map(feature => (
-                                <li className="modal-feature">{feature}</li>
-                            ))}
-                        </ul>
-                        
-                    </div>
-                    <div className="modal-visit-site">
-                            <a className='modal-visit-btn' href={currentData?.url} target="_blank" rel="noreferrer">BUY ME</a>
-                        </div>
+                <div className="iframe-wrapper">
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/di8_dJ3Clyo?si=p10KC3Oh-dFRy6QW" title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; fullscreen; gyroscope; picture-in-picture"
+                        referrerPolicy="strict-origin-when-cross-origin" allowFullScreen></iframe>
+                </div>
+          
+                <div className="modal-tech-wrapper">
+                    <div className='bottom-left-element'>
+                    <h1>Technologies Used</h1>
+                    <div className="modal-techs"><span>Frontend:&nbsp;</span>{currentData?.technologies?.frontend}</div>
+                    <div className="modal-techs"><span>Backend:&nbsp;</span>{currentData?.technologies?.backend}</div>
+                </div>
                 </div>
             </div>
+            <div className="modal-text-wrapper">
+                <div className="modal-header">
+                    <div className="modal-title-wrapper">
+                        <h1 className="modal-title">{currentData?.title}</h1>
+                    </div>
+                    <div className="modal-tools-wrapper">
+                        {currentData?.tools?.map(Tool =>
+                            <Tool className="modal-tool" />
+                        )}
+                    </div>
+                </div>
+                <div className="modal-body">
+                    <p className="modal-description">{currentData?.desc}</p>
+                    <br></br>
+                    <br></br>
+                    <br></br>
+
+                    <div>
+                        <img className='port-gif' id="my-gif" src={Saleor} alt="My Three.JS Demo Gif" />
+                        <br />
+                        <img src={Admin} alt="My Admin Panel Gif" />
+                    </div>
+                    <ul className="modal-features">
+                        {currentData?.features?.map(feature => (
+                            <li className="modal-feature">{feature}</li>
+                        ))}
+                    </ul>
+                </div>
+                <div className="modal-visit-site">
+                    <a className='modal-visit-btn' href={currentData?.url} target="_blank" rel="noreferrer">BUY ME</a>
+                </div>
+            </div>
+            {/* Bottom-left element */}
+          
         </div>
+    </div>
+    
     )
 }
 
