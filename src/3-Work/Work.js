@@ -128,7 +128,7 @@ function Work() {
                                 <img className='port-gif port-gif-logo' src={ SaleorLogo  }   style={port2 ? {opacity: "0"} : {opacity: "1"}}/>
                                 </LazyLoad>
                             </div>
-                            <a href='https://saleor-storefront3.vercel.app/default-channel' target="_blank" rel="noreferrer">
+                            <a href='https://saleor-storefront6.vercel.app/default-channel' target="_blank" rel="noreferrer">
                                 <div className="portGifPopup">
                                     <p>Go to site</p>
                                     <BsBoxArrowUpRight id='goToSitePort'/>
